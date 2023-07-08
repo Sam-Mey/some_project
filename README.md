@@ -39,9 +39,9 @@ systemctl enable docker
 
 ### 替换 arm64
 ```bash
-"deb [arch=arm64] https://download.docker.com/linux/ubuntu \
-$(lsb_release -cs) \
-stable"
+    "deb [arch=arm64] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) \
+    stable"
 ```
 
 # 安装Docker-compose
