@@ -1,11 +1,11 @@
 # 安装 Docker 【Linux amd64】
 
-docker image tag
-master: 与项目最新提交保持一致。
+#### docker image tag
+#### master: 与项目最新提交保持一致。
 
-latest: 最新release版本。
+#### latest: 最新release版本。
 
-v*: release版本号。
+#### v*: release版本号。
 
 ### Centos
 ```bash
