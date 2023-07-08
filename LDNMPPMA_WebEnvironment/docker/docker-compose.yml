@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./html:/var/www/html
+      - ./certs:/etc/nginx/certs
+      - ./nginx/conf:/etc/nginx/nginx.conf
+    environment:
+      - NGINX_HTTPS=true
+    depends_on:
+      - php
+
+  mysql:
+    image: mariadb:10.6
+    container_name: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=your_root_password
+      - MYSQL_DATABASE=your_database_name
+      - MYSQL_USER=your_username
+      - MYSQL_PASSWORD=your_password
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+
+  php:
+    container_name: php
+    image: php:8.1-fpm
+    restart: always
+    volumes:
+      - ./html:/var/www/html
+      - ./php.ini:/usr/local/etc/php/php.ini
+    depends_on:
+      - mysql
+
+  phpmyadmin:
+    image: phpmyadmin:5.1.0
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      - PMA_HOST=mariadb
+      - PMA_USER=your_username
+      - PMA_PASSWORD=your_password
+    ports:
+      - 8080:80
+    depends_on:
+      - mysql
