@@ -18,7 +18,7 @@ systemctl start docker
 systemctl enable docker
 ```
 
-### Debian / Ubuntu
+### Debian / Ubuntu 【amd64】
 ```bash
 sudo apt-get update
 sudo apt-get install \
@@ -35,6 +35,11 @@ sudo add-apt-repository \
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 systemctl start docker
 systemctl enable docker
+```
+
+### arm64
+```bash
+deb [arch=arm64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable
 ```
 
 # 安装Docker-compose
