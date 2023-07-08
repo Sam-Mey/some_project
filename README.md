@@ -37,7 +37,7 @@ systemctl start docker
 systemctl enable docker
 ```
 
-### arm64
+### 替换 arm64
 ```bash
 deb [arch=arm64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable
 ```
