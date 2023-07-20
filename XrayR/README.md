@@ -17,3 +17,11 @@ wget https://raw.githubusercontent.com/Sam-Mey/Documentation/main/XrayR/install_
 cd XrayR-release
 docker-compose logs
 ```
+
+### 更新XrayR
+```bash
+cd XrayR-release
+docker-compose pull
+docker-compose up -d
+```
+## [官方文档](https://xrayr-project.github.io/XrayR-doc/xrayr-xia-zai-he-an-zhuang/install/docker.html)
