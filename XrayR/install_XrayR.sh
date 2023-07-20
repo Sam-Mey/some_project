@@ -93,8 +93,6 @@ echo_color "green"                                  "2.Ubuntu/Debian"
 echo
 echo_color "green"                                  "3.ubuntu_debian_arm"
 echo
-echo_color "green"                                  "4.更新 XrayR"
-echo
 echo_color "green" "-----------------------------------系统选择------------------------------------"
 echo
 echo
@@ -128,15 +126,6 @@ case $choice in
         # 这里执行Ubuntu/Debian安装Docker
         eval "$ubuntu_debian_arm"
         echo_color "green" "Docker安装完成！"
-        ;;
-    4)
-        # updata XrayR
-        echo_color "green" "即将更新 XrayR..."
-        # 设置倒计时
-        countdown 3
-        # 执行更新 XrayR 
-        eval "$updata_XrayR"
-        echo_color "green" "更新完成"
         ;;
     *)
         echo_color "red" "无效的选择"
@@ -190,10 +179,3 @@ done
 # 执行
 cd /root/XrayR-release
 docker-compose up -d
-
-# 更新 XrayR
-updata_XrayR='
-cd /root/XrayR-release
-docker-compose pull
-docker-compose up -d
-'
