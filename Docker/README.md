@@ -1,4 +1,4 @@
-# 安装 Docker 【Linux amd64】
+# 安装 Docker
 
 #### docker image tag
 #### master: 与项目最新提交保持一致。
