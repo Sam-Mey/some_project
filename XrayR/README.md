@@ -7,7 +7,7 @@
 3. 修改 `docker-compose` 配置文件，是为了控制 `XrayR` 运行时产生的日志文件大小。[点击下载](https://github.com/Sam-Mey/Documentation/blob/main/XrayR/docker-compose.yml)
 4. 将 `config.yml` 与 `docker-compose` 上传到 `root` 目录下
 
-### `root` 目录下一键安装
+### 务必在 `root` 目录下执行一键安装
 ```bash
 wget https://raw.githubusercontent.com/Sam-Mey/Documentation/main/XrayR/install_XrayR.sh && chmod +x install_XrayR.sh && ./install_XrayR.sh
 ```
