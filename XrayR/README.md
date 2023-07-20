@@ -15,4 +15,5 @@ wget https://raw.githubusercontent.com/Sam-Mey/Documentation/main/XrayR/install_
 ### 查看日志需要手动进入 `XrayR` 目录
 ```bash
 cd XrayR-release
+docker-compose logs
 ```
