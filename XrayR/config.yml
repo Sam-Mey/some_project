@@ -16,11 +16,11 @@ Nodes:
   -
     PanelType: "V2board" # 面板类型： SSpanel, V2board, NewV2board, PMpanel, Proxypanel, V2RaySocks
     ApiConfig:
-      ApiHost: "https://gdccp.tk" # 面板地址
-      ApiKey: "sdfg456745uj78khjb45" # 面版ID
-      NodeID: 4 # 节点ID
+      ApiHost: "https://域名.com" # 面板地址
+      ApiKey: "123" # 面版ID
+      NodeID: 1 # 节点ID
       NodeType: Trojan # 节点类型： V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
-      Timeout: 30 # api请求超时
+      Timeout: 30 # api 请求超时
       EnableVless: false # 为 V2ray 类型启用 Vless
       EnableXTLS: false # 为 V2ray 和 Trojan 启用 XTLS
       SpeedLimit: 0 # Mbps，本地设置将取代远程设置，0 表示禁用
@@ -31,7 +31,7 @@ Nodes:
       SendIP: 0.0.0.0 # 你要发送包的IP地址
       UpdatePeriodic: 60 # 更新节点信息的时间，多少秒。
       EnableDNS: false # 使用自定义 DNS 配置，请确保您设置好 dns.json
-      DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS策略
+      DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS 策略
       AutoSpeedLimitConfig: # 自动限速配置
         Limit: 0 # 警告速度。 设置为 0 以禁用自动速度限制 (mbps)
         WarnTimes: 0 # 在（WarnTimes）连续警告后，用户将被限制。 设置为 0 立即惩罚超速用户。
@@ -39,8 +39,8 @@ Nodes:
         LimitDuration: 0 # 限制持续多少分钟（单位：分钟）
       GlobalDeviceLimitConfig: # 全局设备限制配置
         Enable: false # 启用用户的全局设备限制
-        RedisAddr: 127.0.0.1:6379 # redis服务器地址
-        RedisPassword: YOUR PASSWORD # Redis密码
+        RedisAddr: 127.0.0.1:6379 # redis 服务器地址
+        RedisPassword: YOUR PASSWORD # Redis 密码
         RedisDB: 0 # Redis 数据库
         Timeout: 5 # redis 请求超时
         Expiry: 60 # 到期时间（秒）
@@ -54,112 +54,14 @@ Nodes:
           ProxyProtocolVer: 0 # 发送 PROXY 协议版本， 0 为禁用
       CertConfig: # 证书配置
         CertMode: dns # 关于如何获取证书的选项：无、文件、http、tls、dns。 选择“无”将强制禁用 tls 配置。
-        CertDomain: "gpt.luckystar.world" # 要认证的域
-        CertFile: /etc/XrayR/cert/gpt.luckystar.world.cert # 如果证书模式为文件则提供
-        KeyFile: /etc/XrayR/cert/gpt.luckystar.world.key
+        CertDomain: "域名.com" # 要认证的域
+        CertFile: /etc/XrayR/cert/域名.com.cert # 证书模式为文件
+        KeyFile: /etc/XrayR/cert/域名.com.key # 域名密钥文件
         Provider: cloudflare # DNS 证书提供商，在此处获取完整的支持列表: https://go-acme.github.io/lego/dns/
-        Email: 710810881@qq.com # 邮箱
+        Email: 123@qq.com # 邮箱
         DNSEnv: # DNS 提供商使用的 DNS ENV 选项
-          CLOUDFLARE_EMAIL: 710810881@qq.com # 域名商的用户名 或 邮箱
-          CLOUDFLARE_API_KEY: 8abb6a0abcffe68c9143fdce010c7f26fd138 # 域名商的 API Key
-  -
-    PanelType: "V2board" # 面板类型： SSpanel, V2board, NewV2board, PMpanel, Proxypanel, V2RaySocks
-    ApiConfig:
-      ApiHost: "https://gdccp.tk" # 面板地址
-      ApiKey: "sdfg456745uj78khjb45" # 面版ID
-      NodeID: 4 # 节点ID
-      NodeType: V2ray # 节点类型： V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
-      Timeout: 30 # api请求超时
-      EnableVless: false # 为 V2ray 类型启用 Vless
-      EnableXTLS: false # 为 V2ray 和 Trojan 启用 XTLS
-      SpeedLimit: 0 # Mbps，本地设置将取代远程设置，0 表示禁用
-      DeviceLimit: 0 # 本地设置将替换远程设置，0 表示禁用
-      RuleListPath: # /etc/XrayR/规则列表 本地规则列表文件的路径
-    ControllerConfig: # 控制器配置
-      ListenIP: 0.0.0.0 # 您要收听的 IP 地址
-      SendIP: 0.0.0.0 # 你要发送包的IP地址
-      UpdatePeriodic: 60 # 更新节点信息的时间，多少秒。
-      EnableDNS: false # 使用自定义 DNS 配置，请确保您设置好 dns.json
-      DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS策略
-      AutoSpeedLimitConfig: # 自动限速配置
-        Limit: 0 # 警告速度。 设置为 0 以禁用自动速度限制 (mbps)
-        WarnTimes: 0 # 在（WarnTimes）连续警告后，用户将被限制。 设置为 0 立即惩罚超速用户。
-        LimitSpeed: 0 # 受限用户限速（单位：mbps）
-        LimitDuration: 0 # 限制持续多少分钟（单位：分钟）
-      GlobalDeviceLimitConfig: # 全局设备限制配置
-        Enable: false # 启用用户的全局设备限制
-        RedisAddr: 127.0.0.1:6379 # redis服务器地址
-        RedisPassword: YOUR PASSWORD # Redis密码
-        RedisDB: 0 # Redis 数据库
-        Timeout: 5 # redis 请求超时
-        Expiry: 60 # 到期时间（秒）
-      EnableFallback: false # 仅支持 Trojan 和 Vless
-      FallBackConfigs:  # 支持多个回退
-        -
-          SNI: # TLS SNI（服务器名称指示），任何为空
-          Alpn: # Alpn，为任何空
-          Path: # HTTP PATH，任何为空
-          Dest: 80 # 必需，后备目的地，了解详情。https://xtls.github.io/config/features/fallback.html 
-          ProxyProtocolVer: 0 # 发送 PROXY 协议版本， 0 为禁用
-      CertConfig: # 证书配置
-        CertMode: dns # 关于如何获取证书的选项：无、文件、http、tls、dns。 选择“无”将强制禁用 tls 配置。
-        CertDomain: "gpt.luckystar.world" # 要认证的域
-        CertFile: /etc/XrayR/cert/gpt.luckystar.world.cert # 如果证书模式为文件则提供
-        KeyFile: /etc/XrayR/cert/gpt.luckystar.world.key
-        Provider: cloudflare # DNS 证书提供商，在此处获取完整的支持列表: https://go-acme.github.io/lego/dns/
-        Email: 710810881@qq.com # 邮箱
-        DNSEnv: # DNS 提供商使用的 DNS ENV 选项
-          CLOUDFLARE_EMAIL: 710810881@qq.com # 域名商的用户名 或 邮箱
-          CLOUDFLARE_API_KEY: 8abb6a0abcffe68c9143fdce010c7f26fd138 # 域名商的 API Key
-  -
-    PanelType: "V2board" # 面板类型： SSpanel, V2board, NewV2board, PMpanel, Proxypanel, V2RaySocks
-    ApiConfig:
-      ApiHost: "https://gdccp.tk" # 面板地址
-      ApiKey: "sdfg456745uj78khjb45" # 面版ID
-      NodeID: 4 # 节点ID
-      NodeType: Shadowsocks # 节点类型： V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
-      Timeout: 30 # api请求超时
-      EnableVless: false # 为 V2ray 类型启用 Vless
-      EnableXTLS: false # 为 V2ray 和 Trojan 启用 XTLS
-      SpeedLimit: 0 # Mbps，本地设置将取代远程设置，0 表示禁用
-      DeviceLimit: 0 # 本地设置将替换远程设置，0 表示禁用
-      RuleListPath: # /etc/XrayR/规则列表 本地规则列表文件的路径
-    ControllerConfig: # 控制器配置
-      ListenIP: 0.0.0.0 # 您要收听的 IP 地址
-      SendIP: 0.0.0.0 # 你要发送包的IP地址
-      UpdatePeriodic: 60 # 更新节点信息的时间，多少秒。
-      EnableDNS: false # 使用自定义 DNS 配置，请确保您设置好 dns.json
-      DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS策略
-      AutoSpeedLimitConfig: # 自动限速配置
-        Limit: 0 # 警告速度。 设置为 0 以禁用自动速度限制 (mbps)
-        WarnTimes: 0 # 在（WarnTimes）连续警告后，用户将被限制。 设置为 0 立即惩罚超速用户。
-        LimitSpeed: 0 # 受限用户限速（单位：mbps）
-        LimitDuration: 0 # 限制持续多少分钟（单位：分钟）
-      GlobalDeviceLimitConfig: # 全局设备限制配置
-        Enable: false # 启用用户的全局设备限制
-        RedisAddr: 127.0.0.1:6379 # redis服务器地址
-        RedisPassword: YOUR PASSWORD # Redis密码
-        RedisDB: 0 # Redis 数据库
-        Timeout: 5 # redis 请求超时
-        Expiry: 60 # 到期时间（秒）
-      EnableFallback: false # 仅支持 Trojan 和 Vless
-      FallBackConfigs:  # 支持多个回退
-        -
-          SNI: # TLS SNI（服务器名称指示），任何为空
-          Alpn: # Alpn，为任何空
-          Path: # HTTP PATH，任何为空
-          Dest: 80 # 必需，后备目的地，了解详情。https://xtls.github.io/config/features/fallback.html 
-          ProxyProtocolVer: 0 # 发送 PROXY 协议版本， 0 为禁用
-      CertConfig: # 证书配置
-        CertMode: dns # 关于如何获取证书的选项：无、文件、http、tls、dns。 选择“无”将强制禁用 tls 配置。
-        CertDomain: "gpt.luckystar.world" # 要认证的域
-        CertFile: /etc/XrayR/cert/gpt.luckystar.world.cert # 如果证书模式为文件则提供
-        KeyFile: /etc/XrayR/cert/gpt.luckystar.world.key
-        Provider: cloudflare # DNS 证书提供商，在此处获取完整的支持列表: https://go-acme.github.io/lego/dns/
-        Email: 710810881@qq.com # 邮箱
-        DNSEnv: # DNS 提供商使用的 DNS ENV 选项
-          CLOUDFLARE_EMAIL: 710810881@qq.com # 域名商的用户名 或 邮箱
-          CLOUDFLARE_API_KEY: 8abb6a0abcffe68c9143fdce010c7f26fd138 # 域名商的 API Key
+          CLOUDFLARE_EMAIL: 123@qq.com # 域名商的用户名 或 邮箱
+          CLOUDFLARE_API_KEY: 123 # 域名商的 API Key
   #   PanelType: "NewV2board" # Panel type: SSpanel, V2board, NewV2board, PMpanel, Proxypanel, V2RaySocks
   #   ApiConfig:
   #     ApiHost: "http://127.0.0.1:668"
