@@ -19,5 +19,5 @@ services:
     logging:
       driver: "json-file"
       options:
-        max-size: "200k"
-        max-file: "1"
+        max-size: "200k" # 默认日志大小 200k
+        max-file: "1" # 默认日志文件 1 个
