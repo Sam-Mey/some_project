@@ -136,7 +136,7 @@ case $choice in
         countdown 3
         # 执行更新 XrayR 
         eval "$updata_XrayR"
-        echo_color "green" "Docker安装完成！"
+        echo_color "green" "更新完成"
         ;;
     *)
         echo_color "red" "无效的选择"
