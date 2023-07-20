@@ -55,6 +55,13 @@ systemctl start docker
 systemctl enable docker
 '
 
+# 更新 XrayR
+updata_XrayR='
+cd /root/XrayR-release
+docker-compose pull
+docker-compose up -d
+'
+
 # 定义字体颜色
 function echo_color {
     local color=$1
@@ -103,28 +110,37 @@ case $choice in
     1)
         # CentOS installation
         echo_color "green" "安装Docker..."
-        # 假设倒计时时间为10秒
+        # 设置倒计时
         countdown 10
-        # 这里执行CentOS安装Docker的代码
+        # 这里执行CentOS安装Docker
         eval "$centos"
         echo_color "green" "Docker安装完成！"
         ;;
     2)
         # Ubuntu/Debian installation
         echo_color "green" "安装Docker..."
-        # 假设倒计时时间为5秒
+        # 设置倒计时
         countdown 5
-        # 这里执行Ubuntu/Debian安装Docker的代码
+        # 这里执行Ubuntu/Debian安装Docker
         eval "$ubuntu_debian"
         echo_color "green" "Docker安装完成！"
         ;;
     3)
         # Ubuntu/Debian installation
         echo_color "green" "安装Docker..."
-        # 假设倒计时时间为5秒
+        # 设置倒计时
         countdown 5
-        # 这里执行Ubuntu/Debian安装Docker的代码
+        # 这里执行Ubuntu/Debian安装Docker
         eval "$ubuntu_debian_arm"
+        echo_color "green" "Docker安装完成！"
+        ;;
+    4)
+        # updata XrayR
+        echo_color "green" "即将更新 XrayR..."
+        # 设置倒计时
+        countdown 3
+        # 执行更新 XrayR 
+        eval "$updata_XrayR"
         echo_color "green" "Docker安装完成！"
         ;;
     *)
