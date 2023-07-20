@@ -55,13 +55,6 @@ systemctl start docker
 systemctl enable docker
 '
 
-# 更新 XrayR
-updata_XrayR='
-cd /root/XrayR-release
-docker-compose pull
-docker-compose up -d
-'
-
 # 定义字体颜色
 function echo_color {
     local color=$1
@@ -197,3 +190,10 @@ done
 # 执行
 cd /root/XrayR-release
 docker-compose up -d
+
+# 更新 XrayR
+updata_XrayR='
+cd /root/XrayR-release
+docker-compose pull
+docker-compose up -d
+'
