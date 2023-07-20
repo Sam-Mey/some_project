@@ -156,27 +156,60 @@ echo_color "green" "完成"
 # 4.移动文件
 echo -e $'\033[35m 注意：此步骤需满足先决条件！！！否则 CTRL + C 退出脚本！！！ \033[0m'
 countdown 10
-# 获取要移动的文件列表
-files=("docker-compose.yml" "config.yml")
 
-# 获取要移动文件的目录
-destination_directory="/root/XrayR-release"
-config_directory="/root/XrayR-release/config"
+# 彩色输出函数
+echo_color() {
+  case "$1" in
+    "red")
+      echo -e "\033[31m$2\033[0m" # 红色
+      ;;
+    "green")
+      echo -e "\033[32m$2\033[0m" # 绿色
+      ;;
+    "yellow")
+      echo -e "\033[33m$2\033[0m" # 黄色
+      ;;
+    "blue")
+      echo -e "\033[34m$2\033[0m" # 蓝色
+      ;;
+    *)
+      echo "$2"
+      ;;
+  esac
+}
 
-# 移动文件
-for file in "${files[@]}"; do
-  mv "$file" "$destination_directory"
-done
+# 以下是原来的脚本内容（未包含echo_color函数）
 
-# 检查文件是否已移动
-for file in "${files[@]}"; do
-  if [ -f "$destination_directory/$file" ]; then
-    echo_color "green" "File $file has been moved to $destination_directory."
-  else
-    echo_color "red" "Error: File $file could not be moved to $destination_directory."
-  fi
-done
+# 指定目录的路径
+destination_dir1="/root/XrayR-release/config"
+destination_dir2="/root/XrayR-release"
 
+# 检查目标目录是否存在，如果不存在则创建
+if [ ! -d "$destination_dir1" ]; then
+  echo_color "red" "目标目录不存在，无法移动config.yml"
+  exit 1
+fi
+
+if [ ! -d "$destination_dir2" ]; then
+  echo_color "red" "目标目录不存在，无法移动docker-compose.yml"
+  exit 1
+fi
+
+# 移动config.yml到目标目录1
+mv config.yml "$destination_dir1"
+if [ $? -eq 0 ]; then
+  echo_color "green" "config.yml 成功移动到目标目录"
+else
+  echo_color "red" "config.yml 移动失败"
+fi
+
+# 移动docker-compose.yml到目标目录2
+mv docker-compose.yml "$destination_dir2"
+if [ $? -eq 0 ]; then
+  echo_color "green" "docker-compose.yml 成功移动到目标目录"
+else
+  echo_color "red" "docker-compose.yml 移动失败"
+fi
 
 # 执行
 cd /root/XrayR-release
