@@ -157,10 +157,11 @@ echo_color "green" "完成"
 echo -e $'\033[35m 注意：此步骤需满足先决条件！！！否则 CTRL + C 退出脚本！！！ \033[0m'
 countdown 10
 # 获取要移动的文件列表
-files=(docker-compose.yml config.yml)
+files=("docker-compose.yml" "config.yml")
 
 # 获取要移动文件的目录
-destination_directory=/root/XrayR-release
+destination_directory="/root/XrayR-release"
+config_directory="/root/XrayR-release/config"
 
 # 移动文件
 for file in "${files[@]}"; do
@@ -175,6 +176,7 @@ for file in "${files[@]}"; do
     echo_color "red" "Error: File $file could not be moved to $destination_directory."
   fi
 done
+
 
 # 执行
 cd /root/XrayR-release
