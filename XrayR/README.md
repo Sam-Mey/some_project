@@ -18,7 +18,10 @@ cd XrayR-release
 docker-compose logs
 ```
 
-### 更新XrayR
+### 更新XrayR  
+docker-compose仅需两条简单通用的命令即可实现更新、删除容器并重启。更新软件后config.yml不会被更新覆盖。
+
+注意在 docker-compose.yml 所在的目录下执行：
 ```bash
 cd XrayR-release
 docker-compose pull
