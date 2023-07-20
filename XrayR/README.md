@@ -9,7 +9,7 @@
 
 ### 务必在 `root` 目录下执行一键安装
 ```bash
-wget https://raw.githubusercontent.com/Sam-Mey/Documentation/main/XrayR/install_XrayR.sh && chmod +x install_XrayR.sh && ./install_XrayR.sh
+wget https://raw.githubusercontent.com/Sam-Mey/Documentation/main/XrayR/install_XrayR.sh &&https://raw.githubusercontent.com/Sam-Mey/Documentation/main/XrayR/update.sh && chmod +x install_XrayR.sh && ./install_XrayR.sh
 ```
 
 ### 查看日志需要手动进入 `XrayR` 目录
