@@ -212,5 +212,22 @@ else
 fi
 
 # 执行
-cd /root/XrayR-release
+# 指定XrayR-release目录的路径
+xrayr_release_dir="/root/XrayR-release"
+
+# 切换到XrayR-release目录
+cd "$xrayr_release_dir"
 docker-compose up -d
+
+# 执行其他操作，进入目录后可以在这里执行任何需要在XrayR-release目录中完成的任务
+# 例如：运行XrayR程序等
+
+# 返回原来的目录（可选）
+# 如果你需要在脚本执行后回到原来的目录，可以将cd命令放在一个子shell中执行
+# 这样脚本执行完后不会影响当前终端的工作目录
+# (cd "$xrayr_release_dir" && some_command)
+
+# 也可以使用pushd和popd，这样更方便返回原目录
+# pushd "$xrayr_release_dir"
+# ... 执行其他操作 ...
+# popd
