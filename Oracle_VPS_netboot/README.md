@@ -19,5 +19,5 @@ wget https://boot.netboot.xyz/ipxe/netboot.xyz-arm64.efi
 ### 6.选择 CentOS —> CentOS 8.0 Stream，点击回车，再次选择 CentOS 8-stream text based
 ### 7.选择 VNC 连接方式。
 ### 8.设置 VNC 密码 任意（6-8）字符
-### 9.启动 VNC IP:1 连接进行相关设置
+### 9.启动 VNC 输入 vps 的 IP:1 连接进行相关设置
 ### 10.启动 SSH 连接实例
