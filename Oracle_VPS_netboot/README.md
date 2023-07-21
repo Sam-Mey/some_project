@@ -1,8 +1,8 @@
 # 甲骨文 VPS 安装 CentOS 8
 
 # 准备工作：
-### 1.甲骨文 arm 架构 VPS
-### 2.本地安装 VNC 用于连接 vps 安装系统
+#### 1.甲骨文 arm 架构 VPS
+#### 2.本地安装 VNC 用于连接 vps 安装系统
 
 # 安装系统：
 ### 1.SSH 连接 VPS，并进入 boot 文件夹，下载 Netboot 启动文件
