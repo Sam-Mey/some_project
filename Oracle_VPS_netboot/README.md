@@ -16,6 +16,8 @@ wget https://boot.netboot.xyz/ipxe/netboot.xyz-arm64.efi
 ### 3.重启 VPS ，并在 Cloud Shell 里面不停按键盘 ESC 键，进入 BIOS
 ### 4.选择 Boot Maintenance Manager —> Boot Frome File —> netboot.xyz-arm64.efi，点击回车，进行引导！
 <img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/1.jpg" />
+<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/2.jpg" />
+<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/3.jpg" />
 ### 5.选择 Linux Network Installs (arm64)
 ### 6.选择 CentOS —> CentOS 8.0 Stream，点击回车，再次选择 CentOS 8-stream text based
 ### 7.选择 VNC 连接方式。
