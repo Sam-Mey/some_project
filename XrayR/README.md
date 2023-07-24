@@ -5,7 +5,7 @@
 1. vps Ubuntu 20.04 1台
 2. 做好域名解析
 3. 开放端口：`80` 必须，（其他端口根据需要自行开放）
-4. 修改 `config.yml` 配置文件。[点击下载](https://raw.githubusercontent.com/Sam-Mey/Documentation/main/XrayR/config.yml)
+4. 修改 `config.yml` 配置文件。[点击下载](https://githubusercontent.com/Sam-Mey/Documentation/main/XrayR/config.yml)
 5. 修改 `docker-compose` 配置文件。[点击下载](https://github.com/Sam-Mey/Documentation/blob/main/XrayR/docker-compose.yml)
 6. 将 `config.yml` 与 `docker-compose` 上传到 `root` 目录下
 
