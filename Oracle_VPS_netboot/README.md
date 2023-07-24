@@ -32,10 +32,10 @@ wget https://boot.netboot.xyz/ipxe/netboot.xyz-arm64.efi
 <img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/4.jpg" />
 
 ### 6.选择 CentOS —> CentOS 8.0 Stream —> CentOS 8-stream text based 回车
-<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/5.jpg" /><img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/6.jpg" />
+<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/5.jpg" />
 
 ### 7.输入 1 回车；选择 VNC 连接方式。
-
+<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/6.jpg" />
 
 ### 8.设置 VNC 密码 任意（6-8）字符
 任意，如：
