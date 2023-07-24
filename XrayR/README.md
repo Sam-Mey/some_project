@@ -30,4 +30,13 @@ cd XrayR-release
 docker-compose pull
 docker-compose up -d
 ```
+
+### 开启Ubuntu系统自带的BBR加速
+```bash
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+lsmod | grep bbr
+```
+
 ## [官方文档](https://xrayr-project.github.io/XrayR-doc/xrayr-xia-zai-he-an-zhuang/install/docker.html)
