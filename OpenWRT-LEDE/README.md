@@ -77,7 +77,7 @@ cmd 输入 `ipconfig` 查看 `vEthernet (WSL)` 的 `IPv4` 就是代理 `IP`； �
 二次编译：  
 
 ```bash
-cd lede
+cd openwrt
 git pull
 ./scripts/feeds update -a
 ./scripts/feeds install -a
