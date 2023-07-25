@@ -17,3 +17,10 @@ RUN apt-get update && \
 
 # 运行Cloudflare Warp
 CMD ["cloudflare-warp"]
+
+# 安装 Cloudflare Warp
+RUN apt-get update && \
+    apt-get install -y cloudflare-warp
+
+# 运行 Cloudflare Warp
+CMD ["cloudflare-warp"]
