@@ -8,7 +8,7 @@ services:
       - "443:443"  # 添加这一行来映射 443 端口
     volumes:
       - ./nginx:/etc/nginx/conf.d/nginx.config:ro  # 注意这里的 ":ro"，将配置文件设置为只读
-      - ./sspanel:/var/www/html
+      - ./www:/var/www/html
       - ./certs:/etc/nginx/certs  # 将证书路径更新为本地路径，用于挂载 SSL 证书和私钥
     depends_on:
       - php
