@@ -13,20 +13,20 @@
 ## 准备工作
 ### 本地 Windows 子系统 为例：
 1. 配置 WSL 全局代理
-   ```bash
-   vim ~/.bashrc
-   ```
+```bash
+vim ~/.bashrc
+```
 
 2. 以 `clash for Windows` （需要开启`Allow Lan`）为例， 
 cmd 输入 `ipconfig` 查看 `vEthernet (WSL)` 的 `IPv4` 就是代理 `IP`； 编辑模式在最下面添加两条
-   ```bash
-   export http_proxy=http://代理IP：代理port
-   export https_proxy=http://代理IP：代理port
-   ```
+```bash
+export http_proxy=http://代理IP：代理port
+export https_proxy=http://代理IP：代理port
+```
 3. 保存退出并重新加载源；测试是否代理成功可用：`curl http://google.com` 返回值则为代理生效
-   ```bash
-   source ~/.bashrc
-   ```
+```bash
+source ~/.bashrc
+```
 ## 编译命令
 1. 安装编译依赖
 
