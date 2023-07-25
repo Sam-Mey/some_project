@@ -21,7 +21,7 @@ services:
         max-size: "200k" # 默认日志大小 200k
         max-file: "1" # 默认日志文件 1 个
 
-  cloudflare-warp:
+  xrayr-release-cloudflare-warp: # 确保服务名与Dockerfile中的CMD中的服务名一致
     build:
       context: .
       dockerfile: Dockerfile
