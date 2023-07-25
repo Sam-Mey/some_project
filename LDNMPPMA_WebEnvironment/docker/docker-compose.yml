@@ -1,71 +1,85 @@
-version: '3.9'
+version: '3.8'
 
 services:
-  # Nginx service
   nginx:
     image: nginx:latest
-    container_name: nginx
     ports:
       - "80:80"
-      - "443:443"
+      - "443:443"  # 添加这一行来映射 443 端口
     volumes:
-      - ./nginx:/etc/nginx/conf.d
-      - ./nginx/certs:/etc/nginx/certs
-      - ./web:/var/www/html
+      - ./nginx:/etc/nginx/conf.d/nginx.config:ro  # 注意这里的 ":ro"，将配置文件设置为只读
+      - ./sspanel:/var/www/html
+      - ./certs:/etc/nginx/certs  # 将证书路径更新为本地路径，用于挂载 SSL 证书和私钥
     depends_on:
       - php
     networks:
-      - my_app_network
+      - my_network
+    logging:  # 配置日志驱动选项
+      driver: "json-file"  # 使用 json-file 驱动
+      options:
+        max-size: "1m"  # 设置日志文件最大大小为 1M
 
-  # PHP service with OPcache
   php:
     image: php:8.2-fpm
-    container_name: php
+    ports:
+      - "9000:9000"
     volumes:
-      - ./web:/var/www/html
+      - ./sspanel:/var/www/html
     networks:
-      - my_app_network
+      - my_network
+    logging:  # 配置日志驱动选项
+      driver: "json-file"  # 使用 json-file 驱动
+      options:
+        max-size: "1m"  # 设置日志文件最大大小为 1M
 
-  # MariaDB service
   mariadb:
     image: mariadb:10.11
-    container_name: mariadb
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: your_mysql_root_password
+      MYSQL_ROOT_PASSWORD: your_root_password
       MYSQL_DATABASE: your_database_name
       MYSQL_USER: your_mysql_user
       MYSQL_PASSWORD: your_mysql_password
     volumes:
-      - ./mariadb:/var/lib/mysql
+      - mariadb_data:/var/lib/mysql
     networks:
-      - my_app_network
+      - my_network
+    logging:  # 配置日志驱动选项
+      driver: "json-file"  # 使用 json-file 驱动
+      options:
+        max-size: "1m"  # 设置日志文件最大大小为 1M
 
-  # Redis service
   redis:
     image: redis:7.0
-    container_name: redis
-    command: redis-server --requirepass your_redis_password
     volumes:
-      - ./redis:/data
-    ports:
-      - "6379:6379"
+      - redis_data:/data
     networks:
-      - my_app_network
+      - my_network
+    logging:  # 配置日志驱动选项
+      driver: "json-file"  # 使用 json-file 驱动
+      options:
+        max-size: "1m"  # 设置日志文件最大大小为 1M
 
-  # phpMyAdmin service
   phpmyadmin:
-    image: phpmyadmin:latest
-    container_name: phpmyadmin
-    environment:
-      PMA_HOST: mariadb
-      MYSQL_ROOT_PASSWORD: your_mysql_root_password
+    image: arm64v8/phpmyadmin
     ports:
       - "8080:80"
+    environment:
+      PMA_HOST: mariadb
+      MYSQL_ROOT_PASSWORD: your_root_password
     depends_on:
       - mariadb
     networks:
-      - my_app_network
+      - my_network
+    logging:  # 配置日志驱动选项
+      driver: "json-file"  # 使用 json-file 驱动
+      options:
+        max-size: "1m"  # 设置日志文件最大大小为 1M
+
+
+volumes:
+  mariadb_data:
+  redis_data:
 
 networks:
-  my_app_network:
-    driver: bridge
+  my_network:
