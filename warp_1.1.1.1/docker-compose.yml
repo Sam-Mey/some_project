@@ -1,0 +1,29 @@
+#version: '3'
+#services: 
+#  xrayr: 
+#    image: ghcr.io/xrayr-project/xrayr:latest
+#    volumes:
+#      - ./config:/etc/XrayR/ # 映射配置文件夹
+#    restart: always
+#    network_mode: host
+
+version: '3'
+services:
+  xrayr:
+    image: ghcr.io/xrayr-project/xrayr:latest
+    volumes:
+      - ./config:/etc/XrayR/ # 映射配置文件夹
+    restart: always
+    network_mode: host
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k" # 默认日志大小 200k
+        max-file: "1" # 默认日志文件 1 个
+
+  cloudflare-warp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true  # 需要给予容器特权，以便Warp能够访问网络
+    network_mode: host  # 使用主机网络模式，确保容器能够正确访问网络
