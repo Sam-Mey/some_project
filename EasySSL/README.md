@@ -9,7 +9,7 @@ iptables-save
 #### CentOS
 ```bash
 sudo systemctl status firewalld
-sudo firewall-cmd --zone=public --add-port=12345/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
 sudo firewall-cmd --reload
 sudo firewall-cmd --list-all
 ```
