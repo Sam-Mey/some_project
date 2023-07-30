@@ -4,11 +4,20 @@ events {
     worker_connections 1024;
 }
 
-# /web/nginx/default.conf
+# /path/to/nginx_config/default.conf
 
 server {
     listen 80;
     server_name your_domain.com;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name your_domain.com;
+
+    ssl_certificate /etc/nginx/certs/fullchain.pem; # 存放证书路径
+    ssl_certificate_key /etc/nginx/certs/privkey.pem; # 存放私钥路径
 
     root /var/www/html;
     index index.php index.html;
@@ -18,7 +27,7 @@ server {
     }
 
     location ~ \.php$ {
-        fastcgi_pass php:9000;
+        fastcgi_pass php:9001;  # 修改为9001
         fastcgi_index index.php;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include fastcgi_params;
@@ -27,4 +36,6 @@ server {
     location ~ /\.ht {
         deny all;
     }
+}
+
 }
