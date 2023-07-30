@@ -75,16 +75,14 @@ services:
     restart: always
     volumes:
       - redis_data:/data
+    depends_on:
+      - php
     networks:
       - sspanel_network
     logging:
       driver: "json-file"
       options:
         max-size: "1m"
-        
-redis:
-  image: redis:7.0
-  restart: always
 
 volumes:
   mariadb_data:
