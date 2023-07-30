@@ -32,7 +32,7 @@ docker run -d -p 8080:80 --name phpmyadmin_container --link mariadb_container:db
 docker run -d -p 9000:9000 --name portainer_container --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/portainer/data:/data portainer/portainer-ce
 ```
 
-
+docker-compose up -d
 
 
 
