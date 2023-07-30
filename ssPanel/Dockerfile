@@ -14,16 +14,8 @@ RUN apt-get update && apt-get install -y \
     php-bz2 \
     php-bcmath
 
-# 设置工作目录
-WORKDIR /var/www/html
-
-# 复制您的网站代码到容器中
-COPY . /var/www/html
-
-# 这里可以根据需要添加其他自定义配置和指令
-
-# 开放 PHP-FPM 端口
-EXPOSE 9000
+# 禁用 proc_open 和 proc_get_status 函数
+RUN echo "disable_functions = proc_open,proc_get_status" >> /usr/local/etc/php/php.ini
 
 # 启动 PHP-FPM 服务
 CMD ["php-fpm"]
