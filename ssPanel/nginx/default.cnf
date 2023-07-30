@@ -6,20 +6,21 @@
 
 server {
     listen 80;
-    server_name your_domain.com;
+    server_name your_domain.com; # 替换你的域名
     return 301 https://$host$request_uri;
 }
 
 server {
     listen 443 ssl;
-    server_name your_domain.com;
+    server_name your_domain.com; # 替换你的域名
 
-    ssl_certificate /etc/nginx/certs/server.crt;
-    ssl_certificate_key /etc/nginx/certs/server.key;
+    ssl_certificate /etc/nginx/certs/server.crt; # 证书存放的路径
+    ssl_certificate_key /etc/nginx/certs/server.key; # 私钥存放的路径
 
     root /var/www/html;
     index index.php index.html;
 
+    # 伪静态
     location / {
         try_files $uri $uri/ /index.php?$query_string;
     }
