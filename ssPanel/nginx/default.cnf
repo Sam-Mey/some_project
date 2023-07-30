@@ -8,7 +8,7 @@ events {
 
 server {
     listen 80;
-    server_name your_domain.com;
+    server_name your_domain.com; # 替换你的域名
     return 301 https://$host$request_uri;
 }
 
@@ -22,6 +22,7 @@ server {
     root /var/www/html;
     index index.php index.html;
 
+    # 伪静态
     location / {
         try_files $uri $uri/ /index.php?$query_string;
     }
