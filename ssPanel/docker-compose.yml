@@ -12,6 +12,7 @@ services:
       - ./certs:/etc/nginx/certs/
     depends_on:
       - php
+      - mariadb
     networks:
       - sspanel_network
     logging:
@@ -26,6 +27,8 @@ services:
       - "9001:9000"
     volumes:
       - /web/sspanel:/var/www/html
+    depends_on:
+      - mariadb
     networks:
       - sspanel_network
     logging:
@@ -66,6 +69,22 @@ services:
       driver: "json-file"
       options:
         max-size: "1m"
+        
+  redis:
+    image: redis:7.0
+    restart: always
+    volumes:
+      - redis_data:/data
+    networks:
+      - sspanel_network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        
+redis:
+  image: redis:7.0
+  restart: always
 
 volumes:
   mariadb_data:
