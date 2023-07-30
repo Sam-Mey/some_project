@@ -1,28 +1,25 @@
-# 设置每个工作进程可以处理的最大连接数
-
-events {
-    worker_connections 1024;
-}
-
 # /path/to/nginx_config/default.conf
+
+# events {
+#     worker_connections 1024;
+# }
 
 server {
     listen 80;
-    server_name your_domain.com; # 替换你的域名
+    server_name your_domain.com;
     return 301 https://$host$request_uri;
 }
 
 server {
     listen 443 ssl;
-    server_name your_domain.com; # 替换你的域名
+    server_name your_domain.com;
 
-    ssl_certificate /etc/nginx/certs/fullchain.pem; # 存放证书路径
-    ssl_certificate_key /etc/nginx/certs/privkey.pem; # 存放私钥路径
+    ssl_certificate /etc/nginx/certs/server.crt;
+    ssl_certificate_key /etc/nginx/certs/server.key;
 
     root /var/www/html;
     index index.php index.html;
 
-    # 伪静态
     location / {
         try_files $uri $uri/ /index.php?$query_string;
     }
@@ -39,4 +36,3 @@ server {
     }
 }
 
-}
