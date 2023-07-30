@@ -1,5 +1,4 @@
 version: '3'
-
 services:
   nginx:
     image: nginx:latest
@@ -7,47 +6,47 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx:/etc/nginx/conf.d/nginx.conf:ro # 注意这里的 ":ro"，将配置文件设置为只读
-      - ./www:/var/www/html
-      - ./certs:/etc/nginx/certs/  # 将证书路径更新为本地路径，用于挂载 SSL 证书和私钥
+      - ./nginx:/etc/nginx/conf.d/nginx.conf:ro
+      - /web/sspanel:/var/www/html
+      - ./certs:/etc/nginx/certs/
     depends_on:
-      - php  # 如果有 php 服务，请确保已经定义了该服务
+      - php
     networks:
       - sspanel_network
     logging:
-      driver: "json-file"  # 使用 json-file 驱动
+      driver: "json-file"
       options:
-        max-size: "1m"  # 设置日志文件最大大小为 1M
+        max-size: "1m"
 
   php:
     image: php:8.2-fpm
     ports:
       - "9001:9000"
     volumes:
-      - ./sspanel:/var/www/html
+      - /web/sspanel:/var/www/html
     networks:
       - sspanel_network
-    logging:  # 配置日志驱动选项
-      driver: "json-file"  # 使用 json-file 驱动
+    logging:
+      driver: "json-file"
       options:
-        max-size: "1m"  # 设置日志文件最大大小为 1M
+        max-size: "1m"
 
   mariadb:
     image: mariadb:10.11
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: your_root_password
-      MYSQL_DATABASE: your_database_name
-      MYSQL_USER: your_mysql_user
-      MYSQL_PASSWORD: your_mysql_password
+      MYSQL_ROOT_PASSWORD: Qaz7758520.+
+      MYSQL_DATABASE: sspanel
+      MYSQL_USER: sspanel
+      MYSQL_PASSWORD: Qaz7758520.+
     volumes:
       - mariadb_data:/var/lib/mysql
     networks:
       - sspanel_network
-    logging:  # 配置日志驱动选项
-      driver: "json-file"  # 使用 json-file 驱动
+    logging:
+      driver: "json-file"
       options:
-        max-size: "1m"  # 设置日志文件最大大小为 1M
+        max-size: "1m"
 
   phpmyadmin:
     image: arm64v8/phpmyadmin
@@ -60,11 +59,10 @@ services:
       - mariadb
     networks:
       - sspanel_network
-    logging:  # 配置日志驱动选项
-      driver: "json-file"  # 使用 json-file 驱动
+    logging:
+      driver: "json-file"
       options:
-        max-size: "1m"  # 设置日志文件最大大小为 1M
-
+        max-size: "1m"
 
 volumes:
   mariadb_data:
@@ -72,4 +70,10 @@ volumes:
 
 networks:
   sspanel_network:
-    driver: bridge # 定义 json-file 驱动
+    driver: bridge
+
+
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_DATABASE: your_database_name
+      MYSQL_USER: your_mysql_user
+      MYSQL_PASSWORD: your_mysql_password
