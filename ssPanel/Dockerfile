@@ -12,7 +12,14 @@ RUN apt-get update && apt-get install -y \
     php-zip \
     php-json \
     php-bz2 \
-    php-bcmath
+    php-bcmath \
+    redis-server
+
+# 安装 OPcache 扩展
+RUN docker-php-ext-install opcache
+
+# 安装 Redis 扩展
+RUN pecl install redis && docker-php-ext-enable redis
 
 # 禁用 proc_open 和 proc_get_status 函数
 RUN echo "disable_functions = proc_open,proc_get_status" >> /usr/local/etc/php/php.ini
