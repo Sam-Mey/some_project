@@ -17,7 +17,7 @@ server {
     ssl_certificate /etc/nginx/certs/server.crt; # 证书存放的路径
     ssl_certificate_key /etc/nginx/certs/server.key; # 私钥存放的路径
 
-    root /var/www/html;
+    root /var/www/html; # 添加 /public
     index index.php index.html;
 
     # 伪静态
