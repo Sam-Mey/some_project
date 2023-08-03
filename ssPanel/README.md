@@ -20,9 +20,36 @@ phpMyAdmin
 注意：Redis 和 OPcache 需要在 Dockerfile 中安装
 
 ### 4. Dockerfile 安装扩展 包括 Redis OPcache [配置扩展文件：Dockerfile]()
-```bash
-dnf install php-fpm php-cli php-mysqlnd php-curl php-gd php-mbstring php-xml php-opcache php-zip php php-json php-bz2 php-bcmath
-```
+  1. 解决PHP依赖问题：由于 甲骨文 arm 最高支持 CentOS 8 的安装，所以需要先升级 PHP 版本
+  CentOS:
+  ```bash
+  sudo yum install epel-release
+  sudo yum install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+  sudo yum install yum-utils
+  sudo yum-config-manager --enable remi-php82
+  sudo yum update
+  sudo yum install php
+  ```
+  Ubuntu/Debian
+  ```bash
+  sudo apt update
+  sudo apt install software-properties-common
+  sudo add-apt-repository ppa:ondrej/php
+  sudo apt update
+  sudo apt install php8.2
+  ```
+  2. 安装 PHP 8.2
+  ```bash
+  sudo yum install php8.2
+  ```
+  3. 安装常用依赖：
+  ```bash
+  sudo yum install php8.2-mysql php8.2-redis php8.2-gd
+  ```
+  4. 安装 sspanel 依赖
+  ```bash
+  dnf install php-fpm php-cli php-mysqlnd php-curl php-gd php-mbstring php-xml php-opcache php-zip php php-json php-bz2 php-bcmath
+  ```
 将 Dockerfile 上传到 docker-compose.yml 所在目录，依次执行：
 ```bash
 docker run -d --name mariadb_container -e MYSQL_ROOT_PASSWORD=my_secret_password mariadb:10.11
