@@ -1,82 +1,16 @@
-# Docker 搭建 ssPanel
+# OneinStack 搭建 ssPanel
 
-环境：这里用的是 （甲骨文 arm64 CentOS 8 ）
+环境：这里用的是 （甲骨文 arm64 CentOS 9 ）
 
-### 1. 安装 Docker [安装方法]()
+### 1. 安装 OneinStack [官网](https://oneinstack.com/ )  [指定安装](https://oneinstack.com/auto/)
 
-### 2. 安装 Docker 图形化管理 portainer (相当于宝塔)
-```bash
-docker volume create portainer_data
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
-```
-安装完成后通过 IP:9000 访问管理界面
-
-### 3. 使用 docker-compose.yml 文件安装运行环境：[编辑配置文件: .yml]()
+### 2. 客制化的安装方案。
+  
 Nginx
 PHP 8.2 with OPcache
 MariaDB 10.11
 Redis 7.0
 phpMyAdmin
-注意：Redis 和 OPcache 需要在 Dockerfile 中安装
-
-### 4. Dockerfile 安装扩展 包括 Redis OPcache [配置扩展文件：Dockerfile]()
-  1. 解决PHP依赖问题：由于 甲骨文 arm 最高支持 CentOS 8 的安装，所以需要先升级 PHP 版本
-  CentOS:
-  ```bash
-  sudo yum install epel-release
-  sudo yum install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-  sudo yum install yum-utils
-  sudo yum-config-manager --enable remi-php82
-  sudo yum update
-  sudo yum install php
-  ```
-  Ubuntu/Debian
-  ```bash
-  sudo apt update
-  sudo apt install software-properties-common
-  sudo add-apt-repository ppa:ondrej/php
-  sudo apt update
-  sudo apt install php8.2
-  ```
-  2. 安装 PHP 8.2
-  ```bash
-  sudo yum install php8.2
-  ```
-  3. 安装常用依赖：
-  ```bash
-  sudo yum install php8.2-mysql php8.2-redis php8.2-gd
-  ```
-  4. 安装 sspanel 依赖
-  ```bash
-  dnf install php-fpm php-cli php-mysqlnd php-curl php-gd php-mbstring php-xml php-opcache php-zip php php-json php-bz2 php-bcmath
-  ```
-将 Dockerfile 上传到 docker-compose.yml 所在目录，依次执行：
 ```bash
-docker run -d --name mariadb_container -e MYSQL_ROOT_PASSWORD=my_secret_password mariadb:10.11
-docker run -d --name php_fpm_container --link mariadb_container:mysql -v /path/to/your/php/code:/var/www/html php:8.2-fpm
-docker run -d -p 80:80 --name nginx_container --link php_fpm_container:php -v /path/to/your/nginx/conf:/etc/nginx/conf.d nginx
-docker run -d -p 8080:80 --name phpmyadmin_container --link mariadb_container:db arm64v8/phpmyadmin
-docker run -d -p 9000:9000 --name portainer_container --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/portainer/data:/data portainer/portainer-ce
+wget -c http://mirrors.linuxeye.com/oneinstack-full.tar.gz && tar xzf oneinstack-full.tar.gz && ./oneinstack/install.sh --nginx_option 1 --php_option 12 --phpcache_option 1 --php_extensions redis --phpmyadmin  --db_option 5 --dbinstallmethod 1 --dbrootpwd oneinstack --redis  
 ```
-
-docker-compose up -d
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
