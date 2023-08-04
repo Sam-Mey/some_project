@@ -104,13 +104,7 @@ chown -R www:www 站点路径
      php xcat Update
      ```
 
-  5. 使用 crontab -e 指令设置 SSPanel 的基本 cron 任务：
-
-     ```bash
-     */5 * * * * /usr/local/php/bin/php /path/to/your/site/xcat  Cron
-     ```
-
-  6. 使用 `crontab -e` 指令设置 SSPanel 的基本 cron 任务：
+  5. 使用 `crontab -e` 指令设置 SSPanel 的基本 cron 任务：
 
      ```bash
      */5 * * * * /usr/local/php/bin/php /path/to/your/site/xcat  Cron
