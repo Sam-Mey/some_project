@@ -4,8 +4,7 @@
 
 ### 1. 安装 OneinStack [官网](https://oneinstack.com/ )  [指定安装](https://oneinstack.com/auto/)
 
-### 2. 客制化的安装方案。
-  
+### 2. 一键安装：
 Nginx
 PHP 8.2 with OPcache
 MariaDB 10.11
