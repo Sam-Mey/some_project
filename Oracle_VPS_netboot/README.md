@@ -1,4 +1,4 @@
-# 甲骨文 VPS 安装 CentOS 8
+# 甲骨文 VPS 安装 CentOS 9
 
 # 准备工作：
 #### 1.甲骨文 arm 架构 VPS
