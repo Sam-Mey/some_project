@@ -10,7 +10,7 @@ phpMyAdmin
   
 ## 1. 安装 OneinStack [官网](https://oneinstack.com/ )  [指定安装](https://oneinstack.com/auto/)
 
-#### 客制化一键安装：[查看配置]()
+#### 客制化一键安装：[查看配置](https://github.com/Sam-Mey/some_project/blob/main/ssPanel/img/Stack.png)
 数据库：root  (默认)
 密码：oneinstack  （默认）
 
