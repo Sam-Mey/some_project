@@ -1,6 +1,6 @@
 # OneinStack 搭建 ssPanel
 
-环境：这里用的是 （甲骨文 arm64 CentOS 9 ）
+环境：这里用的是 （甲骨文 arm64 CentOS 9 务必使用 干净的系统）
 
 ### 1. 安装 OneinStack [官网](https://oneinstack.com/ )  [指定安装](https://oneinstack.com/auto/)
 Nginx  
@@ -9,7 +9,7 @@ MariaDB 10.11
 Redis 7.0  
 phpMyAdmin  
 
-#### 一键安装环境：
+#### 一键安装环境：先 `yum install wget tar -y`
   
 ```bash
 wget -c http://mirrors.linuxeye.com/oneinstack-full.tar.gz && tar xzf oneinstack-full.tar.gz && ./oneinstack/install.sh --nginx_option 1 --php_option 12 --phpcache_option 1 --php_extensions fileinfo,redis --phpmyadmin  --db_option 5 --dbinstallmethod 1 --dbrootpwd oneinstack --redis 
@@ -17,6 +17,13 @@ wget -c http://mirrors.linuxeye.com/oneinstack-full.tar.gz && tar xzf oneinstack
 #### 安装 PHP 扩展：
 ```bash
 dnf install php-fpm php-cli php-mysqlnd php-curl php-gd php-mbstring php-xml php-opcache php-zip php php-json php-bz2 php-bcmath
+```
+#### 开机自启  
+```bash
+sudo systemctl enable nginx
+sudo systemctl enable php-fpm
+sudo systemctl enable mariadb
+sudo systemctl enable redis
 ```
   
 ### 3. 部署 SSPanel UIM
