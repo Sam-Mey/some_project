@@ -38,6 +38,68 @@ wget https://getcomposer.org/installer -O composer.phar
 php composer.phar
 php composer.phar install --no-dev
 ```
-
 ###### 2023.4 代表的是 SSPanel UIM 的版本，你可以在 [Release](https://github.com/Anankke/SSPanel-Uim/releases) 页面中查看当前的最新稳定版本或者是输入 dev 使用开发版。请注意，dev 分支可能在使用过程中出现不可预知的问题。  
+
 #### 修改 Nginx vhost 配置文件
+  1. 打开配置文件：
+     
+     ```bash
+     vi /usr/local/nginx/conf/vhost/域名.conf
+     ```
+
+  3. 设置站点运行目录 （`root /data/wwwroot/域名` 后添加 `/public`）
+     
+  5. 设置伪静态
+     
+     ```bash
+     location / {
+     try_files $uri /index.php$is_args$args;
+     }
+     ```
+  6. 重启 nginx
+     
+      ```bash
+      service nginx restart
+      ```
+
+
+#### 设置站点权限
+```bash
+chmod -R 755 站点路径
+chown -R www:www 站点路径
+```
+
+## 3. 创建数据库  
+
+```bash
+mysql -u root -p
+CREATE DATABASE 数据库名;
+SHOW DATABASES;
+```
+
+  1. 连接数据库
+       
+     ```bash
+     cd /data/wwwroot/域名/config
+     ls -a
+     cp config/.config.example.php config/.config.php
+     cp config/appprofile.example.php config/appprofile.php
+     vi config/.config.php
+     ```
+  3. 站点初始化
+     
+     ```bash
+     php xcat Migration new
+     php xcat Tool importAllSettings
+     php xcat Tool createAdmin
+     php xcat ClientDownload
+     ```
+
+
+
+
+
+
+
+
+[ssPanel 官方文档](https://wiki.sspanel.org/#/install-using-oneinstack)
