@@ -8,9 +8,14 @@ MariaDB 10.11
 Redis 7.0  
 phpMyAdmin  
   
-### 1. 安装 OneinStack [官网](https://oneinstack.com/ )  [指定安装](https://oneinstack.com/auto/)
+## 1. 安装 OneinStack [官网](https://oneinstack.com/ )  [指定安装](https://oneinstack.com/auto/)
 ```bash
-yum install wget tar -y 
+yum update -y
+yum install wget tar -y
+wget http://mirrors.linuxeye.com/oneinstack-full.tar.gz
+tar xzf oneinstack-full.tar.gz
+cd oneinstack
+sudo ./install.sh 
 ```
 #### 安装 PHP 扩展：
 ```bash
@@ -20,29 +25,29 @@ dnf install php-fpm php-cli php-mysqlnd php-curl php-gd php-mbstring php-xml php
 ```bash
 sudo systemctl enable nginx
 sudo systemctl enable php-fpm
-sudo systemctl enable mariadb
-sudo systemctl enable redis
 ```
   
-### 3. 部署 SSPanel UIM
+## 2. 部署 SSPanel UIM
 ```bash
 cd oneinstack
 ./vhost.sh
 ```
-#### 使用 Let's Encrypt 证书，务必先开放 80 端口
+###### 使用 Let's Encrypt 申请证书，务必先开放 80 端口
 #### 编辑 php.ini，删除 disable_functions 中的 `proc_open`， `proc_get_status` 函数，保存重启
 ```bash
 vi /usr/local/php/etc/php.ini
 service php-fpm restart
 ```
-#### 虚拟主机设置完成后，前往你所设置的网站根目录文件夹，执行以下命令：
+###### 为避免 `-bash: php：未找到命令` 情况，设置以下环境变量：打开 `vi ~/.bashrc` 添加以下：保存加载：`source ~/.bashrc`
+```
+export PATH=$PATH:/usr/local/php/bin
+```
+#### 虚拟主机设置完成后，前往你所设置的网站根目录文件夹 `cd /data/wwwroot/域名`，执行以下命令：
 ```bash
-git clone -b 2023.3 https://github.com/Anankke/SSPanel-Uim.git .
+git clone -b 2023.4 https://github.com/Anankke/SSPanel-Uim.git .
 wget https://getcomposer.org/installer -O composer.phar
 php composer.phar
 php composer.phar install --no-dev
 ```
-#### 为避免 `-bash: php：未找到命令` 情况，设置以下环境变量：打开 `vi ~/.bashrc` 添加以下：保存加载：`source ~/.bashrc`
-```bash
-export PATH=$PATH:/usr/local/php/bin
-```
+###### 2023.4 代表的是 SSPanel UIM 的版本，你可以在 [Release](https://github.com/Anankke/SSPanel-Uim/releases) 页面中查看当前的最新稳定版本或者是输入 dev 使用开发版。请注意，dev 分支可能在使用过程中出现不可预知的问题。  
+#### 修改 Nginx vhost 配置文件
