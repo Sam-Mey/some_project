@@ -4,8 +4,8 @@
 
 1. Docker 搭建 WEB 环境，LNMP [查看详情](https://github.com/Sam-Mey/some_project/tree/main/Docker-LNMP)
 2. 一键证书申请 [查看详情](https://github.com/Sam-Mey/some_project/tree/main/EasySSL)
-3. OpenWRT LEDE 的编译流程 [查看详情](https://github.com/Sam-Mey/some_project/tree/main/XrayR)
-4. 通过网络引导程序重置 甲骨文云 vps 系统 （arm64） [查看详情]()
-5. 一键 XrayR 安装 [查看详情](https://github.com/Sam-Mey/Documentation/tree/main/XrayR)
-6. ssPanel 面板搭建 [查看详情]()
-7. warp_1.1.1.1 解锁流媒体...[查看详情]()
+3. OpenWRT LEDE 的编译流程 [查看详情](https://github.com/Sam-Mey/some_project/tree/main/OpenWRT-LEDE)
+4. 通过网络引导程序重置 甲骨文云 vps 系统 （arm64） [查看详情](https://github.com/Sam-Mey/some_project/tree/main/Oracle_VPS_netboot)
+5. 一键 XrayR 安装 [查看详情](https://github.com/Sam-Mey/some_project/tree/main/XrayR)
+6. ssPanel 面板搭建 [查看详情](https://github.com/Sam-Mey/some_project/tree/main/ssPanel)
+7. warp_1.1.1.1 解锁流媒体...[查看详情](https://github.com/Sam-Mey/some_project/tree/main/warp_1.1.1.1)
