@@ -83,10 +83,10 @@ chown -R www:www 站点路径
   2. 连接数据库
        
      ```bash
-     cd /data/wwwroot/域名/config
-     ls -a
      cp config/.config.example.php config/.config.php
      cp config/appprofile.example.php config/appprofile.php
+     cd /data/wwwroot/域名/config
+     ls -a
      vi config/.config.php
      ```
   3. 站点初始化
