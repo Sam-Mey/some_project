@@ -66,8 +66,7 @@ php composer.phar install --no-dev
 
 #### 设置站点权限
 ```bash
-chmod -R 755 站点路径
-chown -R www:www 站点路径
+sudo chown -R root:root 你的站点
 ```
 
 ## 3. 完成后就可以创建数据库和对应的用户了
