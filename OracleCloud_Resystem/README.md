@@ -35,25 +35,25 @@ wget https://boot.netboot.xyz/ipxe/netboot.xyz.efi
 ### 3.重启 VPS ，并在 Cloud Shell 里面不停按键盘 ESC 键，进入 BIOS
 
 ### 4.选择 Boot Maintenance Manager —> EFI —> netboot.xyz-arm64.efi，点击回车，进行引导！
-<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/1.jpg" />
-<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/2.jpg" />
-<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/3.jpg" />
+<img src="https://github.com/Sam-Mey/some-project/main/OracleCloud_Resystem/img/1.jpg" />
+<img src="https://github.com/Sam-Mey/some-project/main/OracleCloud_Resystem/img/2.jpg" />
+<img src="https://github.com/Sam-Mey/some-project/main/OracleCloud_Resystem/img/3.jpg" />
 
 ### 5.选择 Linux Network Installs (arm64)
-<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/4.jpg" />
+<img src="https://github.com/Sam-Mey/some-project/main/OracleCloud_Resystem/img/4.jpg" />
 
 ### 6.选择 CentOS —> CentOS 8.0 Stream —> CentOS 8-stream text based 回车
-<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/5.jpg" />
+<img src="https://github.com/Sam-Mey/Dsome-project/main/OracleCloud_Resystem/img/5.jpg" />
 
 ### 7.输入 1 回车；选择 VNC 连接方式。
-<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/6.jpg" />
+<img src="https://github.com/Sam-Mey/some-project/main/OracleCloud_Resystem/img/6.jpg" />
 
 ### 8.设置 VNC 密码 任意（6-8）字符 如：123456
   
 ### 9.启动 VNC 输入 vps 的 IP:1 连接进行相关设置（VNC 选择中文操作界面）
-<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/7.jpg" />
-<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/8.jpg" />
-<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/9.jpg" />
-<img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/10.jpg" />
+<img src="https://github.com/Sam-Mey/some-project/main/OracleCloud_Resystem/img/7.jpg" />
+<img src="https://github.com/Sam-Mey/some-project/main/OracleCloud_Resystem/img/8.jpg" />
+<img src="https://github.com/Sam-Mey/some-project/main/OracleCloud_Resystem/img/9.jpg" />
+<img src="https://github.com/Sam-Mey/some-project/main/OracleCloud_Resystem/img/10.jpg" />
 
 ### 最后启动 SSH 连接实例
