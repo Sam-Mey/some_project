@@ -48,11 +48,8 @@ wget https://boot.netboot.xyz/ipxe/netboot.xyz.efi
 <img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/6.jpg" />
 
 ### 8.设置 VNC 密码 任意（6-8）字符
-任意，如：
-```bash
-123456
-```
-
+任意，如：123456
+  
 ### 9.启动 VNC 输入 vps 的 IP:1 连接进行相关设置（VNC 选择中文操作界面）
 <img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/7.jpg" />
 <img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/8.jpg" />
