@@ -7,6 +7,7 @@
 # 安装系统：
 ### 1.SSH 连接 VPS，并进入 boot 文件夹，下载 Netboot 启动文件
   
+#### Ubuntu/Debian arm64
 ```bash
 apt update -y
 apt install wget -y
@@ -14,7 +15,7 @@ cd /boot/efi/EFI
 wget https://boot.netboot.xyz/ipxe/netboot.xyz-arm64.efi
 ```
   
-#### 若你是重装系统，请执行下面命令
+#### CentOS arm64
 ```bash
 yum update -y
 yum apt
