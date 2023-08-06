@@ -59,4 +59,4 @@ wget https://boot.netboot.xyz/ipxe/netboot.xyz.efi
 <img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/9.jpg" />
 <img src="https://github.com/Sam-Mey/Documentation/blob/main/Oracle_VPS_netboot/img/10.jpg" />
 
-### 10.启动 SSH 连接实例
+### 最后启动 SSH 连接实例
