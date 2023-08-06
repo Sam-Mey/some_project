@@ -62,12 +62,10 @@ php composer.phar install --no-dev
       ```bash
       service nginx restart
       ```
-
-
-#### 设置站点权限
-```bash
-sudo chown -R root:root 你的站点
-```
+  5.  设置站点权限
+     ```bash
+     sudo chown -R root:root 你的站点
+    ```
 
 ## 3. 完成后就可以创建数据库和对应的用户了
 
