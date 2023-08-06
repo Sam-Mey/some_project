@@ -6,12 +6,14 @@
 
 # 安装系统：
 ### 1.SSH 连接 VPS，并进入 boot 文件夹，下载 Netboot 启动文件
+  
 ```bash
 apt update -y
 apt install wget -y
 cd /boot/efi/EFI
 wget https://boot.netboot.xyz/ipxe/netboot.xyz-arm64.efi
 ```
+  
 #### 若你是重装系统，请执行下面命令
 ```bash
 yum update -y
@@ -19,6 +21,13 @@ yum apt
 cd /boot/efi/EFI
 wget https://boot.netboot.xyz/ipxe/netboot.xyz-arm64.efi
 ```
+  
+#### x86_64
+```bash
+cd /boot/efi/EFI
+wget https://boot.netboot.xyz/ipxe/netboot.xyz.efi
+```
+  
 ### 2.甲骨文控制台设置,启动 Cloud Shell 连接
 
 ### 3.重启 VPS ，并在 Cloud Shell 里面不停按键盘 ESC 键，进入 BIOS
