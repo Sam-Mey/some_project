@@ -4,5 +4,5 @@
 
 下载 `iptables.sh` 上传到服务器root目录，赋予权限  
 ```bash
-chmod +x iptables.sh && ./iptables.sh
+wget https://raw.githubusercontent.com/Sam-Mey/some_project/main/WAF-Rules/iptables.sh && chmod +x iptables.sh && ./iptables.sh
 ```
