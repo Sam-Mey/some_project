@@ -63,7 +63,7 @@ docker restart portainer
 
 # 卸载  
 
-Ubuntu/Debian  centos `sudo yum remove docker-ce docker-ce-cli containerd.io
+Ubuntu/Debian  CentOS 系统用`sudo yum remove docker-ce docker-ce-cli containerd.io
 `
 ```bash
 sudo systemctl stop docker
