@@ -60,3 +60,23 @@ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /va
 ```bash
 docker restart portainer
 ```
+
+# 卸载  
+
+Ubuntu/Debian  centos `sudo yum remove docker-ce docker-ce-cli containerd.io
+`
+```bash
+sudo systemctl stop docker
+sudo apt-get purge docker-ce docker-ce-cli containerd.io
+sudo rm -rf /var/lib/docker
+sudo rm -rf /etc/docker
+sudo rm /usr/local/bin/docker-compose
+```
+#### 检查是否完全卸载
+```bash
+dpkg -l | grep docker
+rpm -qa | grep docker
+ls /var/lib/docker
+ls /etc/docker
+docker-compose --version
+```
