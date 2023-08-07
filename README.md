@@ -1,6 +1,6 @@
 ## 包含一些 安装教程 与一些 全自动化安装脚本
 
-### 目录
+### 目录：
 
 1. Docker 搭建 WEB 环境，LNMP [查看详情](https://github.com/Sam-Mey/some_project/tree/main/Docker-LNMP)
 2. 一键证书申请 [查看详情](https://github.com/Sam-Mey/some_project/tree/main/EasySSL)
