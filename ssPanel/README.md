@@ -62,7 +62,13 @@ php composer.phar install --no-dev
       ```bash
       service nginx restart
       ```
-  5.  设置站点权限  
+  5.  设置站点权限
+
+      ```bash
+      chmod -R 755 /path/to/your/site
+      chown -R www:www /path/to/your/site
+      ```
+###### 如果在执行 `php xcat ClientDownload` app 下载时提示：文件所属组为：www 时，执行以下命令，下载完成后再将权限设置成 www。
 
       ```bash
       sudo chown -R root:root 你的站点
