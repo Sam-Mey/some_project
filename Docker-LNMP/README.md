@@ -69,6 +69,8 @@ Ubuntu/Debian；如果是 CentOS 系统用 `sudo yum remove docker-ce docker-ce-
 sudo systemctl stop docker
 sudo apt-get purge docker-ce docker-ce-cli containerd.io -y
 sudo apt-get purge docker-ce docker-ce-rootless-extras docker-compose -y
+sudo apt-get purge docker-buildx-plugin docker-compose-plugin -y
+sudo apt-get autoremove -y
 sudo rm -rf /var/lib/docker
 sudo rm -rf /etc/docker
 sudo rm /usr/local/bin/docker-compose
