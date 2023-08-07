@@ -9,4 +9,4 @@
 5. 一键 设置 vps 防火墙 [查看详情](https://github.com/Sam-Mey/some_project/tree/main/WAF-Rules)
 6. 一键 XrayR 安装 [查看详情](https://github.com/Sam-Mey/some_project/tree/main/XrayR)
 7. ssPanel 面板搭建 [查看详情](https://github.com/Sam-Mey/some_project/tree/main/ssPanel)
-8. warp_1.1.1.1 解锁流媒体...[查看详情](https://github.com/Sam-Mey/some_project/tree/main/warp_1.1.1.1)
+8. warp_1.1.1.1 解锁流媒体 （未完成）... [查看详情](https://github.com/Sam-Mey/some_project/tree/main/warp_1.1.1.1)
