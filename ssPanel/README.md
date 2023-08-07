@@ -69,7 +69,7 @@ php composer.phar install --no-dev
       chown -R www:www /path/to/your/site
       ```
         
-      ###### 如果在执行 `php xcat ClientDownload` app 下载时提示：文件所属组为：www 时，执行以下命令，下载完成后再将权限设置成 www。
+      ###### 如果在执行 `php xcat ClientDownload` app 下载时提示：当前用户为 root，与文件所有者 www 不符时，执行以下命令，下载完成后再将权限设置成 www。
      
       ```bash
       sudo chown -R root:root 你的站点
