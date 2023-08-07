@@ -1,6 +1,6 @@
 # WAF-Rules
 
-## 1. 安装 iptable 
+## 安装 iptable 
 
 root目录下执行：
   
