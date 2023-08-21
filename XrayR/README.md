@@ -17,6 +17,7 @@ wget https://raw.githubusercontent.com/Sam-Mey/some_project/main/XrayR/install_X
   && ./install_XrayR.sh
 ```
 
+# 附加：
 ### 查看日志需要手动进入 `XrayR` 目录
 ```bash
 cd XrayR-release
