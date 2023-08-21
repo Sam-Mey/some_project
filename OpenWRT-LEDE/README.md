@@ -1,4 +1,4 @@
-# 利用Lean方法编译 OpenWRT-and-LEDE
+# 利用Lean方法编译 openwrt-and-lede
 
 ## 注意
 
@@ -133,7 +133,7 @@ echo 'export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"' >> ~/.bashrc
 
 1. 源代码中绝不含任何后门和可以监控或者劫持你的 HTTPS 的闭源软件， SSL 安全是互联网最后的壁垒。安全干净才是固件应该做到的；
 
-2. 存档版本仓库地址：[LEDE](https://github.com/coolsnowwolf/openwrt)
+2. 存档版本仓库地址：[lede](https://github.com/coolsnowwolf/openwrt)
 
-3. 官方源码仓库地址：[OpenWrt](https://github.com/openwrt/openwrt)
+3. 官方源码仓库地址：[openwrt](https://github.com/openwrt/openwrt)
 
