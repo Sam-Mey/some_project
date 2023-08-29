@@ -55,7 +55,7 @@ services:
     image: php:8.2-fpm
     restart: always
     ports:
-      - "9001:9000"
+      - "9000:9000"
     volumes:
       - /web/sspanel:/var/www/html
     depends_on:
