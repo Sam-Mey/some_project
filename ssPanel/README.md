@@ -65,8 +65,8 @@ php composer.phar install --no-dev
   5.  设置站点权限
 
       ```bash
-      chmod -R 755 /path/to/your/site
-      chown -R www:www /path/to/your/site
+      chmod -R 755 站点目录
+      chown -R www:www 站点目录
       ```
         
       ###### 如果在执行 `php xcat ClientDownload` app 下载时提示：当前用户为 root，与文件所有者 www 不符时，执行以下命令，下载完成后再将权限设置成 www。
