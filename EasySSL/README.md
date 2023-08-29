@@ -1,6 +1,6 @@
 # 根据官方步骤自定义一键证书申请
 
-### 1. 务必开放 80 端口
+### 1. 必须开放 80 端口
 #### Ubuntu/Debian
 ```bash
 sudo iptables -I INPUT -s 0.0.0.0/0 -p tcp --dport 80 -j ACCEPT
