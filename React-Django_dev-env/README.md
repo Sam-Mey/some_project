@@ -15,7 +15,7 @@ npm install -g create-react-app
 
 #### 3. 创建新的 React 应用；进入项目目录启动服务器
 ```bash
-npx create-react-app 项目名称（小写）
+npx create-react-app [项目名称（小写）]
 cd 项目名称
 npm start
 ```
