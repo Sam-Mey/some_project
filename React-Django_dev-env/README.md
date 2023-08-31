@@ -1,6 +1,6 @@
 # 本地搭建 React + Django 项目开发环境 (Windows)
 
-### 安装 react
+## 安装 react
 
 ##### 您需要安装 [Node.js](https://nodejs.org/en) 进行本地开发。
 
@@ -21,7 +21,7 @@ npm start
 ```
 
 #### 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：
-<img>
+<img src="https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png" />
 
 ##### 相关命令：
 ```bash
@@ -38,7 +38,7 @@ cd jcclub
 npm start
 ```
 
-# 设置 Django 后端
+## 设置 Django 后端
 
 ### 安装 Django 之前，请确保你已经安装了 [Python](https://www.python.org/) 与编辑器 [vscode](https://code.visualstudio.com/)，并设置好环境变量。
 
@@ -72,4 +72,5 @@ python manage.py runserver # 启动开发服务器
 ```
 
 #### 此时就可以访问 http://127.0.0.1:8000/ ,不出意外你将会看到一下界面：
-<img>
+<img src="https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Django.png" />
+
