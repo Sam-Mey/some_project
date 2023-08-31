@@ -20,7 +20,7 @@ cd frontend_project
 npm start
 ```
 
-#### 此时就可以访问 `http://localhost:3000/` ,不出意外你将会看到一下界面：
+#### 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：
 <img>
 
 ##### 相关命令：
