@@ -39,9 +39,9 @@ npm start
 
 # 设置 Django 后端
 
-### 安装Django之前，请确保你已经安装了 [Python](https://www.python.org/) 与编辑器[vscode](https://code.visualstudio.com/)，并设置好环境变量和开发环境。
+### 安装 Django 之前，请确保你已经安装了 [Python](https://www.python.org/) 与编辑器 [vscode](https://code.visualstudio.com/)，并设置好环境变量和开发环境。
 
-#### 1. 安装虚拟环境（可选）,虽然不是必需的，但建议在项目中使用Python虚拟环境，以隔离不同项目的依赖关系。在命令行中运行以下命令来创建和激活虚拟环境：
+#### 1. 安装虚拟环境（可选）,虽然不是必需的，但建议在项目中使用 Python 虚拟环境，以隔离不同项目的依赖关系。在命令行中运行以下命令来创建和激活虚拟环境：
   
 #### 打开 cmd 切换到要创建虚拟环境的目录，如：D:\project
 ```bash
