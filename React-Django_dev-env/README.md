@@ -71,5 +71,5 @@ python manage.py migrate # 运行数据库迁移
 python manage.py runserver # 启动开发服务器
 ```
 
-#### 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：
+#### 此时就可以访问 http://127.0.0.1:8000/ ,不出意外你将会看到一下界面：
 <img>
