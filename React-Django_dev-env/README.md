@@ -50,8 +50,7 @@ cd frontend_project
 npm start
 ```
 
-#### 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：
-<img src="https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png" />
+#### 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png)
 
 ##### 相关命令：
 ```bash
@@ -101,6 +100,5 @@ python manage.py migrate # 运行数据库迁移
 python manage.py runserver # 启动开发服务器
 ```
 
-#### 此时就可以访问 http://127.0.0.1:8000/ ,不出意外你将会看到一下界面：
-<img src="https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Django.png" />
+#### 此时就可以访问 http://127.0.0.1:8000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Django.png)
 
