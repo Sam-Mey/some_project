@@ -3,8 +3,8 @@
 ## 安装数据库 [MySQL](https://dev.mysql.com/downloads/mysql/)
 > 1. 下载 MySQL MSI Installer  （这里使用的是 MySQL 8.1）
 > 2. 根据提示安装，（这里用的是 自定义安装 指定位置）
-> 3. 选择配置 []() （这里使用默认）
-> 4. 创建 root 密码 []()
+> 3. 选择配置 [查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/mysql01.png) （这里使用默认）
+> 4. 创建 root 密码 [查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/mysql02.png)
 > 5. 默认下一步直到安装完成。
 > 6. 进入到 MySQL 安装目录，例：E:\MySQL\MySQL Server 8.1\bin
 > 7. 输入 `mysql -u root -p` 
