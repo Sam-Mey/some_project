@@ -45,7 +45,7 @@ npm install -g create-react-app
 
 #### 3. 创建新的 React 应用；进入项目目录启动服务器
 ```bash
-npx create-react-app frontend_project # 前端项目名称 例：custom
+npx create-react-app frontend_project # 前端项目名称 例：frontend_project
 cd frontend_project
 npm start
 ```
@@ -88,7 +88,7 @@ pip install django
 
 #### 3. 创建 Django 项目
 ```bash
-django-admin startproject backend_project # 后端项目名称 例：admin
+django-admin startproject backend_project # 后端项目名称 例：backend_project
 ```
 #### 配置数据库：
 > 打开 `backend/settings.py` 文件，配置数据库连接。默认情况下，Django使用SQLite数据库。您可以在 DATABASES 部分配置数据库连接信息，例如使用 MySQL 或 PostgreSQL。
