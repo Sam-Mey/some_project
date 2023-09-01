@@ -1,6 +1,36 @@
 # 本地搭建 React + Django 项目开发环境 (Windows)
 
-## 安装 react
+## 安装数据库 [MySQL](https://dev.mysql.com/downloads/mysql/)
+> 1. 下载 MySQL MSI Installer  （这里使用的是 MySQL 8.1）
+> 2. 根据提示安装，（这里用的是 自定义安装 指定位置）
+> 3. 选择配置 []() （这里使用默认）
+> 4. 创建 root 密码 []()
+> 5. 默认下一步直到安装完成。
+> 6. 进入到 MySQL 安装目录，例：E:\MySQL\MySQL Server 8.1\bin
+> 7. 输入 `mysql -u root -p` 
+> 8. 输入 设置的 root 密码 既可以连接到数据库 
+
+##### 相关命令
+```bash
+SHOW DATABASES; # 查看数据库
+CREATE DATABASE database_name; # 查看数据库
+DROP DATABASE database_name; # 删除数据库
+USE database_name; # 更改数据库
+
+# 重置 root 密码：
+
+# 停止 MySQL 服务器。
+# 启动 MySQL 服务器，并在启动过程中添加 --skip-grant-tables 选项，以绕过权限检查。
+# 连接到 MySQL 服务器。
+# 执行 SQL 命令来更改 root 密码。
+# 停止 MySQL 服务器，然后重新启动它
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password'; # 更改 root 密码
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password'; # 创建新用户
+DROP USER 'username'@'localhost'; # 删除新用户
+```
+
+## 安装 react 前端框架
 
 ##### 您需要安装 [Node.js](https://nodejs.org/en) 进行本地开发。
 
@@ -38,7 +68,7 @@ cd jcclub
 npm start
 ```
 
-## 设置 Django 后端
+## 设置 Django 后端框架
 
 ### 安装 Django 之前，请确保你已经安装了 [Python](https://www.python.org/) 与编辑器 [vscode](https://code.visualstudio.com/)，并设置好环境变量。
 
