@@ -6,9 +6,7 @@
 > 2. 国内用户编译前最好准备好梯子
 > 3. lede 默认登录 用户名：192.168.1.1 密码 password
 > 4. openwrt 登录 用户名：root 密码：无
-
-
-1. Linux 系统，推荐 Ubuntu LTS 或 Windows 子系统 或 阿里云 海外vps
+> 5. Linux 系统，推荐 Ubuntu LTS 或 Windows 子系统 或 阿里云 海外vps
 
 ## 准备工作
 ### 本地 Windows 子系统 为例：
