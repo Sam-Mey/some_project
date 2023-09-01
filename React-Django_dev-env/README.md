@@ -10,7 +10,7 @@
 > 7. 输入 `mysql -u root -p` 
 > 8. 输入 设置 root 密码 既可以连接到数据库 
 
-##### 相关命令
+##### 相关命令：
 ```bash
 SHOW DATABASES; # 查看数据库
 CREATE DATABASE database_name; # 查看数据库
