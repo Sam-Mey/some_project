@@ -12,10 +12,10 @@
 
 ##### 相关命令：
 ```bash
-CREATE DATABASE 数据库名; # 创建数据库
-SHOW DATABASES;          # 查看数据库
-DROP DATABASE 数据库名;   # 删除数据库
-USE 数据库名;             # 更改数据库
+CREATE DATABASE 数据库名;    # 创建数据库
+SHOW DATABASES;             # 查看数据库
+DROP DATABASE 数据库名;      # 删除数据库
+USE 数据库名;                # 更改数据库
 
 # 重置 root 密码：
 
@@ -75,11 +75,11 @@ npm start
   
 #### 打开 cmd 切换到要创建虚拟环境的目录，如：D:\project
 ```bash
-python -m venv venv  # 创建虚拟环境
-venv\Scripts\activate  # (vscode) 激活虚拟环境 
-venv\Scripts\activate  # (Windows cmd) 激活虚拟环境 
-venv\Scripts\activate.ps1  # (Windows PowerShell) 激活虚拟环境
-deactivate # 退出虚拟环境
+python -m venv venv          # 创建虚拟环境
+venv\Scripts\activate        # (vscode) 激活虚拟环境 
+venv\Scripts\activate        # (Windows cmd) 激活虚拟环境 
+venv\Scripts\activate.ps1    # (Windows PowerShell) 激活虚拟环境
+deactivate                   # 退出虚拟环境
 ```
 
 #### 2. 安装 Django
@@ -96,9 +96,9 @@ django-admin startproject backend_project # 后端项目名称 例：backend_pro
 
 ```bash
 cd backend_project
-python manage.py startapp api # 创建应用,例如 api
-python manage.py migrate # 运行数据库迁移
-python manage.py runserver # 启动开发服务器
+python manage.py startapp api    # 创建应用,例如 api
+python manage.py migrate         # 运行数据库迁移
+python manage.py runserver       # 启动开发服务器
 ```
 
 #### 此时就可以访问 http://127.0.0.1:8000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Django.png)
