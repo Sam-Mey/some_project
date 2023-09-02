@@ -50,7 +50,8 @@ npm install -g create-react-app
 #### 3. 创建新的 React 应用；进入项目目录启动服务器
 ```bash
 npx create-react-app frontend_project # 使用 react 创建前端项目 例：frontend_project
-npx create-next-app frontend_project  # 使用 next 创建前端项目 例：frontend_project [官方文档](https://nextjs.org/docs/pages/building-your-application)
+npx create-next-app frontend_project  # 使用 next 创建前端项目 例：frontend_project
+[官方文档](https://nextjs.org/docs/pages/building-your-application)
 cd frontend_project
 npm start
 ```
