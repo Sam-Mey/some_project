@@ -46,13 +46,21 @@ npm install react@18.2.0 react-dom@18.2.0
 npm install -g create-react-app
 ```
 
-#### 3. 创建新的 React 应用 [官方文档](https://nextjs.org/docs/pages/building-your-application)
+#### 3. 创建新的 React 应用 [官方文档](https://nextjs.org/docs/pages/building-your-application)  
+#### 使用 react 创建前端项目 例：frontend_project
 ```bash
-npx create-react-app frontend_project # 使用 react 创建前端项目 例：frontend_project
-npx create-next-app frontend_project  # 使用 next 创建前端项目 例：frontend_project
+npx create-react-app frontend_project
 cd frontend_project
 npm start
 ```
+  
+#### 使用 next 创建前端项目 例：frontend_project
+```
+npx create-next-app frontend_project  
+cd frontend_project
+npm run dev
+```
+  
 > 当你使用 npx create-next-app [项目名称] 创建前端项目时会出现以下交互：  
 >  
 > √ Would you like to use TypeScript? ... No / [Yes]()  
@@ -62,10 +70,16 @@ npm start
 > √ Would you like to use App Router? (recommended) ... No / [Yes]()  
 > √ Would you like to customize the default import alias? ... [No]() / Yes
 >  
-> 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png)
+
+```bash
+cd frontend_project
+npm start
+```
+  
+> 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：[React](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png)  [Next.js](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Nextjs.png)
 >   
 > 接下来你可以开始你的前端项目开发了
-
+  
 ##### 相关命令：
 ```bash
 npm start     # 启动开发服务器,允许你在本地开发环境中实时预览你的 [React](https://github.com/facebook/react) 应用。当你运行这个命令时，它将启动一个本地服务器并在浏览器中打开应用。你可以在开发服务器中进行代码修改，它会自动重新加载以显示更新。
