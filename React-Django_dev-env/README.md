@@ -33,13 +33,16 @@ DROP USER 'username'@'localhost';                               # 删除新用�
 
 ## 安装 react 前端框架
 
-##### 您需要安装 [Node.js](https://nodejs.org/en) 进行本地开发。
+
+> 本地开发需要安装 [Node.js](https://nodejs.org/en)。您还可以选择在生产中使用 Node.js，但不是必须的。许多 React 框架支持导出到静态 HTML/CSS/JS 文件夹。
 
 #### 1. 安装 React 和 ReactDOM
 ```bash
-npm install react react-dom
+npm install react@18.2.0 react-dom@18.2.0
 ```
-#### 2. 安装create-react-app：create-react-app是一个用于快速创建React应用的官方脚手架工具
+> @18.2.0 表示版本为 18.2.0，你可以在 [releases](https://github.com/facebook/react/releases) 中查看以及安装相应的版本
+
+#### 2. 安装 create-react-app：它是一个用于快速创建 React 应用的官方脚手架工具
 ```bash
 npm install -g create-react-app
 ```
