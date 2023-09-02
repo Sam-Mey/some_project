@@ -35,9 +35,10 @@ DROP USER 'username'@'localhost';                               # 删除新用�
   
 > 本地开发需要安装 [Node.js](https://nodejs.org/en)。您还可以选择在生产中使用 Node.js，但不是必须的。许多 React 框架支持导出到静态 HTML/CSS/JS 文件夹。
 
-#### 1. 安装 React 和 ReactDOM
+#### 1. 安装与卸载 （React  ReactDOM）
 ```bash
-npm install react@18.2.0 react-dom@18.2.0
+npm install react@18.2.0 react-dom@18.2.0  # 安装
+npm uninstall react react-dom              # 卸载
 ```
 > @18.2.0 表示版本为 18.2.0，你可以在 [releases](https://github.com/facebook/react/releases) 中查看以及安装相应的版本
 
@@ -47,20 +48,19 @@ npm install -g create-react-app
 ```
 
 #### 3. 创建新的 React 项目  
-#### 使用 react 创建前端项目 例：frontend_project [官方文档](https://react.dev/learn/start-a-new-react-project)
+#### 使用 React 创建前端项目 例：frontend_project [官方文档](https://react.dev/learn/start-a-new-react-project)
 ```bash
 npx create-react-app frontend_project
 cd frontend_project
 npm start
 ```
   
-#### 使用 next 创建前端项目 例：frontend_project [官方文档](https://react.dev/learn/start-a-new-react-project)
-```
+##### [Next.js](https://react.dev/learn/start-a-new-react-project) 是一个全栈 React 框架。它用途广泛，可让您创建任何规模的 React 应用程序 — 从大部分静态博客到复杂的动态应用程序。要创建新的 Next.js 项目，请在终端中运行：
+```bash
 npx create-next-app frontend_project  
 cd frontend_project
 npm run dev
 ```
-  
 > 当你使用 npx create-next-app [项目名称] 创建前端项目时会出现以下交互：  
 >  
 > √ Would you like to use TypeScript? ... No / [Yes]()  
@@ -71,9 +71,19 @@ npm run dev
 > √ Would you like to customize the default import alias? ... [No]() / Yes
 >  
 
+##### [Remix](https://react.dev/learn/start-a-new-react-project) 是一个带有嵌套路由的全栈 React 框架。它允许您将应用程序分解为嵌套部分，这些部分可以并行加载数据并刷新以响应用户操作。要创建新的 Remix 项目，请运行：
 ```bash
-cd frontend_project
-npm start
+npx create-remix
+```
+
+##### [Gatsby](https://react.dev/learn/start-a-new-react-project) 是一个 React 框架，用于快速 CMS 支持的网站。其丰富的插件生态系统及其 GraphQL 数据层简化了将内容、API 和服务集成到一个网站中的过程。要创建新的 Gatsby 项目，请运行：
+```bash
+npx create-gatsby
+```
+
+##### [Expo (for native apps)](https://react.dev/learn/start-a-new-react-project) 是一个 React 框架，可让您创建具有真正本机 UI 的通用 Android、iOS 和 Web 应用程序。它为React Native提供了一个SDK，使本机部分更易于使用。要创建新的 Expo 项目，请运行：
+```bash
+npx create-expo-app
 ```
   
 > 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：[React](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png)  [Next.js](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Nextjs.png)
@@ -90,9 +100,6 @@ npm run eject # 用于 "弹出" 你的应用，将构建依赖、配置文件和
 # 提示信息建议你从运行以下命令开始:
 cd frontend_project
 npm start
-
-# 卸载
-npm uninstall react react-dom
 ```
 
 ## 设置 Django 后端框架
