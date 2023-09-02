@@ -1,4 +1,4 @@
-# 本地搭建 React + Django 项目开发环境 (Windows)
+# 本地搭建 [React](https://github.com/facebook/react) + Django 项目开发环境 (Windows)
 
 
 ## 安装数据库 [MySQL](https://dev.mysql.com/downloads/mysql/)
