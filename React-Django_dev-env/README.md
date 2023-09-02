@@ -1,5 +1,9 @@
 # 本地搭建 React + Django 项目开发环境 (Windows)
 
+## 说明：
+> React 18的开发者预览版本，并且它已经不再支持直接使用ReactDOM.render。相反，React 18 引入了一个新的根渲染 API，应该使用 createRoot 来渲染你的应用。
+> 
+
 ## 安装数据库 [MySQL](https://dev.mysql.com/downloads/mysql/)
 > 1. 下载 MySQL MSI Installer  （这里使用的是 MySQL 8.1）
 > 2. 根据提示安装，（这里用的是 自定义安装 指定位置）
