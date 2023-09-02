@@ -12,6 +12,7 @@
 
 ##### 相关命令：
 ```bash
+CREATE DATABASE 数据库名; # 创建数据库
 SHOW DATABASES; # 查看数据库
 CREATE DATABASE database_name; # 查看数据库
 DROP DATABASE database_name; # 删除数据库
