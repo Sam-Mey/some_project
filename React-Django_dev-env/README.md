@@ -14,9 +14,9 @@
 ```bash
 CREATE DATABASE 数据库名; # 创建数据库
 SHOW DATABASES; # 查看数据库
-CREATE DATABASE database_name; # 查看数据库
-DROP DATABASE database_name; # 删除数据库
-USE database_name; # 更改数据库
+CREATE DATABASE 数据库名; # 查看指定数据库
+DROP DATABASE 数据库名; # 删除数据库
+USE 数据库名; # 更改数据库
 
 # 重置 root 密码：
 
