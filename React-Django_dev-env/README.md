@@ -79,6 +79,7 @@ python -m venv venv  # 创建虚拟环境
 venv\Scripts\activate  # (vscode) 激活虚拟环境 
 venv\Scripts\activate  # (Windows cmd) 激活虚拟环境 
 venv\Scripts\activate.ps1  # (Windows PowerShell) 激活虚拟环境
+deactivate # 退出虚拟环境
 ```
 
 #### 2. 安装 Django
