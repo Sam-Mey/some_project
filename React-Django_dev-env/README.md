@@ -85,6 +85,8 @@ npx create-gatsby
 ```bash
 npm install -g expo-cli # 管理工具
 npx create-expo-app
+cd client
+npm start
 ```
   
 > 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：[React](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png)  [Next.js](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Nextjs.png)
