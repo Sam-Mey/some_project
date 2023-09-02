@@ -13,9 +13,9 @@
 ##### 相关命令：
 ```bash
 CREATE DATABASE 数据库名; # 创建数据库
-SHOW DATABASES; # 查看数据库
-DROP DATABASE 数据库名; # 删除数据库
-USE 数据库名; # 更改数据库
+SHOW DATABASES;          # 查看数据库
+DROP DATABASE 数据库名;   # 删除数据库
+USE 数据库名;             # 更改数据库
 
 # 重置 root 密码：
 
