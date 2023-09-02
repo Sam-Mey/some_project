@@ -25,9 +25,9 @@ USE 数据库名;                # 更改数据库
 # 执行 SQL 命令来更改 root 密码。
 # 停止 MySQL 服务器，然后重新启动它
 
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password'; # 更改 root 密码
-CREATE USER 'username'@'localhost' IDENTIFIED BY 'password'; # 创建新用户
-DROP USER 'username'@'localhost'; # 删除新用户
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';     # 更改 root 密码
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';    # 创建新用户
+DROP USER 'username'@'localhost';                               # 删除新用户
 ```
 
 ## 安装 react 前端框架
