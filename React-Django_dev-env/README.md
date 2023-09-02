@@ -50,7 +50,8 @@ cd frontend_project
 npm start
 ```
 
-#### 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png)
+> 1. 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png)  
+> 2. 接下来你可以开始你的前端项目开发了
 
 ##### 相关命令：
 ```bash
@@ -69,11 +70,10 @@ npm start
 
 ## 设置 Django 后端框架
 
-### 安装 Django 之前，请确保你已经安装了 [Python](https://www.python.org/) 与编辑器 [vscode](https://code.visualstudio.com/)，并设置好环境变量。
-
-#### 1. 安装虚拟环境（可选）,虽然不是必需的，但建议在项目中使用 Python 虚拟环境，以隔离不同项目的依赖关系。在命令行中运行以下命令来创建和激活虚拟环境：
+> 1. 安装 Django 之前，请确保你已经安装了 [Python](https://www.python.org/) 与编辑器 [vscode](https://code.visualstudio.com/)，并设置好环境变量。  
+> 2. 安装虚拟环境（可选）,虽然不是必需的，但建议在项目中使用 Python 虚拟环境，以隔离不同项目的依赖关系。在命令行中运行以下命令来创建和激活虚拟环境： 
   
-#### 打开 cmd 切换到要创建虚拟环境的目录，如：D:\project
+#### 1. 创建虚拟环境的目录，打开 cmd 切换到要创建虚拟环境的目录；如：D:\project
 ```bash
 python -m venv venv          # 创建虚拟环境
 venv\Scripts\activate        # (vscode) 激活虚拟环境 
@@ -95,11 +95,13 @@ django-admin startproject backend_project # 后端项目名称 例：backend_pro
 > 打开 `backend/settings.py` 文件，配置数据库连接。默认情况下，Django使用SQLite数据库。您可以在 DATABASES 部分配置数据库连接信息，例如使用 MySQL 或 PostgreSQL。
 
 ```bash
-cd backend_project
+cd backend_project               # 进入后端项目目录
 python manage.py startapp api    # 创建应用,例如 api
+python manage.py makemigrations  # 生成数据库迁移文件
 python manage.py migrate         # 运行数据库迁移
 python manage.py runserver       # 启动开发服务器
 ```
 
-#### 此时就可以访问 http://127.0.0.1:8000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Django.png)
+> 1. 此时就可以访问 http://127.0.0.1:8000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Django.png)   
+> 2. 接下来可以开始你的项目开发了！
 
