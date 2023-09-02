@@ -69,8 +69,7 @@ cd frontend_project
 npm start
 
 # 卸载
-npm install react react-dom
-npm install react react-dom
+npm uninstall react react-dom
 ```
 
 ## 设置 Django 后端框架
