@@ -116,14 +116,28 @@ pip install django
 
 #### 3. 创建 Django 项目
 ```bash
-django-admin startproject backend_project # 后端项目名称 例：backend_project
+django-admin startproject backend_project    # 后端项目名称 例：backend_project
+cd backend_project                           # 进入后端项目目录
+python manage.py startapp api                # 创建应用,例如 api
 ```
 #### 配置数据库：
-> 打开 `backend/settings.py` 文件，配置数据库连接。默认情况下，Django 使用 SQLite 数据库。您可以在 DATABASES 部分配置数据库连接信息，例如使用 MySQL 或 PostgreSQL。
+> 打开 `settings.py` 文件，配置数据库连接。默认情况下，Django 使用 SQLite 数据库。您可以在 DATABASES 部分配置数据库连接信息，例如使用 MySQL 或 PostgreSQL；以 MySQL 为例：
+>   
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'your_database_name',
+        'USER': 'your_database_user',
+        'PASSWORD': 'your_database_password',
+        'HOST': 'your_database_host',  # 默认为 'localhost'，如果 MySQL 在本地，请保留
+        'PORT': 'your_database_port',  # 默认为 '3306'
+    }
+}
+```
 
 ```bash
-cd backend_project               # 进入后端项目目录
-python manage.py startapp api    # 创建应用,例如 api
+pip install mysqlclient          # 安装 MySQL 模块
 python manage.py makemigrations  # 生成数据库迁移文件
 python manage.py migrate         # 运行数据库迁移
 python manage.py runserver       # 启动开发服务器
