@@ -32,8 +32,7 @@ DROP USER 'username'@'localhost';                               # 删除新用�
 ```
 
 ## 安装 react 前端框架
-
-
+  
 > 本地开发需要安装 [Node.js](https://nodejs.org/en)。您还可以选择在生产中使用 Node.js，但不是必须的。许多 React 框架支持导出到静态 HTML/CSS/JS 文件夹。
 
 #### 1. 安装 React 和 ReactDOM
@@ -54,9 +53,18 @@ npx create-next-app frontend_project  # 使用 next 创建前端项目 例：fro
 cd frontend_project
 npm start
 ```
-
-> 1. 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png)  
-> 2. 接下来你可以开始你的前端项目开发了
+> 当你使用 npx create-next-app [项目名称] 创建前端项目时会出现以下交互：  
+>  
+> √ Would you like to use TypeScript? ... No / [Yes]()  
+> √ Would you like to use ESLint? ... No / [Yes]()  
+> √ Would you like to use Tailwind CSS? ... No / [Yes]()  
+> √ Would you like to use `src/` directory? ... No / [Yes]()  
+> √ Would you like to use App Router? (recommended) ... No / [Yes]()  
+> √ Would you like to customize the default import alias? ... [No]() / Yes
+>  
+> 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png)
+>   
+> 接下来你可以开始你的前端项目开发了
 
 ##### 相关命令：
 ```bash
