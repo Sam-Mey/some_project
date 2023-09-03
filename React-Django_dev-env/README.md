@@ -85,7 +85,7 @@ npx create-gatsby
 ```bash
 npm install -g expo-cli # 管理工具
 npx create-expo-app [项目名称]
-cd client
+cd client [项目名称]
 npm start
 ```
   
