@@ -38,7 +38,8 @@ DROP USER 'username'@'localhost';                               # 删除新用�
 #### 1. 安装与卸载 （React  ReactDOM）
 ```bash
 npm install react@18.2.0 react-dom@18.2.0  # 安装
-npm uninstall react react-dom              # 卸载
+npm uninstall -g react react-dom           # 卸载
+yarn global remove react react-dom         # yarn 卸载
 ```
 > @18.2.0 表示版本为 18.2.0，你可以在 [releases](https://github.com/facebook/react/releases) 中查看以及安装相应的版本
 
