@@ -106,7 +106,7 @@ cd frontend_project
 npm start
 ```
 
-## 设置 Django 后端框架
+## 设置 Django 后端框架 [官网]( https://www.djangoproject.com/)
 
 > 1. 安装 Django 之前，请确保你已经安装了 [Python](https://www.python.org/) 与编辑器 [vscode](https://code.visualstudio.com/)，并设置好环境变量。  
 > 2. 安装虚拟环境（可选）,虽然不是必需的，但建议在项目中使用 [Python](https://www.python.org/) 虚拟环境，以隔离不同项目的依赖关系。在命令行中运行以下命令来创建和激活虚拟环境： 
