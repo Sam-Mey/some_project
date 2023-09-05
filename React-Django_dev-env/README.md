@@ -107,8 +107,8 @@ npm start
 ```
 
 ## 设置 Django 后端框架 
-## [官网]( https://www.djangoproject.com/)  
-## [官方文档]( https://docs.djangoproject.com/)  
+## [官网]( https://www.djangoproject.com/)
+## [官方文档]( https://docs.djangoproject.com/)
 ## [教程（Tutorials）](https://docs.djangoproject.com/en/stable/intro/tutorial01/ )
 
 > 1. 安装 Django 之前，请确保你已经安装了 [Python](https://www.python.org/) 与编辑器 [vscode](https://code.visualstudio.com/)，并设置好环境变量。  
