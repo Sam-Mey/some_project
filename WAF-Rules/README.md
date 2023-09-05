@@ -18,6 +18,7 @@ sudo iptables -L -n
 ```
 sudo iptables -L -n | grep "dpt:80"
 ss -tuln | grep 80
+ss -tuln | grep LISTEN                    # 输出所有正在监听的套接字
 ```
 
 #### 查看系统上所有端口的开放情况：
