@@ -1,4 +1,4 @@
-# 自动化安装 XrayR
+# 一键 Docker 部署 XrayR
 
 ### 先决条件
 
@@ -17,7 +17,7 @@ wget https://raw.githubusercontent.com/Sam-Mey/some_project/main/XrayR/install_X
   && ./install_XrayR.sh
 ```
 
-# 附加：
+## 附加：
 ### 查看日志需要手动进入 `XrayR` 目录
 ```bash
 cd XrayR-release
