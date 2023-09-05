@@ -46,7 +46,7 @@ sudo iptables -L INPUT -v -n | grep icmp
 sudo sysctl net.ipv4.icmp_echo_ignore_all
 ```
 
-#### 开放端口：
+#### 开放指定端口：
 ```
 iptables -I INPUT -s 0.0.0.0/0 -p tcp --dport 80 -j ACCEPT
 iptables -I INPUT -s 0.0.0.0/0 -p tcp --dport 443 -j ACCEPT
