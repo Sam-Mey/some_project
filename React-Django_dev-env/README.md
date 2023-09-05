@@ -132,7 +132,7 @@ pip install django
 ```bash
 django-admin startproject backend_project    # 后端项目名称 例：backend_project
 cd backend_project                           # 进入后端项目目录
-python manage.py startapp admin              # 创建应用,例如：admin
+python manage.py startapp application              # 创建应用,例如：application
 ```
 #### 配置数据库：
 > 打开 `settings.py` 文件，配置数据库连接。默认情况下，Django 使用 SQLite 数据库。您可以在 DATABASES 部分配置数据库连接信息，例如使用 MySQL 或 PostgreSQL；以 MySQL 为例：
