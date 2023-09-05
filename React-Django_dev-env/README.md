@@ -148,10 +148,11 @@ DATABASES = {
 ```
 
 ```bash
-pip install mysqlclient          # 安装 MySQL 模块
-python manage.py makemigrations  # 生成数据库迁移文件
-python manage.py migrate         # 运行数据库迁移
-python manage.py runserver       # 启动开发服务器
+pip install mysqlclient            # 安装 MySQL 模块
+python manage.py makemigrations    # 生成数据库迁移文件
+python manage.py migrate           # 运行数据库迁移
+python manage.py createsuperuser   # 创建超级管理员
+python manage.py runserver         # 启动开发服务器
 ```
 
 > 1. 此时就可以访问 http://127.0.0.1:8000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Django.png)   
