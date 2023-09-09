@@ -25,9 +25,9 @@ docker-compose logs
 ```
 
 ### 更新 XrayR 直接在 root 目录下执行：`./update.sh` 或执行以下：
-删除容器并重启，更新软件后config.yml不会被更新覆盖。
-
-注意在 docker-compose.yml 所在的目录下执行：
+> 删除容器并重启，更新软件后config.yml不会被更新覆盖。
+> 
+> 注意在 docker-compose.yml 所在的目录下执行：
 ```bash
 cd XrayR-release
 docker-compose pull
