@@ -1,4 +1,4 @@
-# 安装 Docker
+# 安装 [Docker](https://www.docker.com/) [Hub 镜像站](https://hub.docker.com/)
 
 > docker image tag
 > 
@@ -8,7 +8,7 @@
 >
 > v *: release 版本号。
 
-### Centos
+### Centos：
 ```bash
 yum install -y yum-utils
 yum-config-manager \
@@ -19,7 +19,7 @@ systemctl start docker
 systemctl enable docker
 ```
 
-### Debian / Ubuntu 【amd64】
+### Debian / Ubuntu： 【amd64】
 ```bash
 sudo apt-get update
 sudo apt-get install \
@@ -45,24 +45,24 @@ systemctl enable docker
    stable"
 ```
 
-# 安装Docker-compose
+# 安装Docker-compose：
 ```bash
 curl -fsSL https://get.docker.com | bash -s docker
-curl -L "https://github.com/docker/compose/releases/download/v2.19.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+curl -L "https://github.com/docker/compose/releases/download/latest/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
 
-# 安装 Docker 图形化管理 portainer
+# 安装 Docker 图形化管理 portainer：
 ```bash
 docker volume create portainer_data
 docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 ```
-重启 portainer
+重启 portainer：
 ```bash
 docker restart portainer
 ```
 
-# 卸载  
+# 卸载：  
 
 Ubuntu/Debian；如果是 CentOS 系统用 `sudo yum remove docker-ce docker-ce-cli containerd.io
 `
@@ -76,7 +76,7 @@ sudo rm -rf /var/lib/docker
 sudo rm -rf /etc/docker
 sudo rm /usr/local/bin/docker-compose
 ```
-#### 检查是否完全卸载
+#### 检查是否完全卸载：
 ```bash
 dpkg -l | grep docker
 rpm -qa | grep docker
