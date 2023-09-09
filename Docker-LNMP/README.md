@@ -1,11 +1,11 @@
 # 安装 Docker
 
-#### docker image tag
-#### master: 与项目最新提交保持一致。
-
-#### latest: 最新release版本。
-
-#### v*: release版本号。
+> docker image tag
+> master: 与项目最新提交保持一致。
+>
+> latest: 最新 release 版本。
+>
+> v *: release 版本号。
 
 ### Centos
 ```bash
