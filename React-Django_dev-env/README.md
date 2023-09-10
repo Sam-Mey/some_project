@@ -159,7 +159,7 @@ python manage.py changepassword admin  # 重置超级管理员密码
 > 1. 此时就可以访问 http://127.0.0.1:8000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Django.png)   
 > 2. 接下来可以开始你的项目开发了！
 
-#### 4. [React](https://github.com/facebook/react)前端项目 连接 Django 后端项目
+#### 4. [React](https://github.com/facebook/react) 前端项目 连接 Django 后端项目
 ```bash
 # 安装 CORS 中间件，并配置 CORS 中间件以允许来自 React 前端跨域请求
 pip install django-cors-headers 
