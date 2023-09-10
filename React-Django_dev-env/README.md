@@ -159,7 +159,40 @@ python manage.py changepassword admin  # 重置超级管理员密码
 > 1. 此时就可以访问 http://127.0.0.1:8000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Django.png)   
 > 2. 接下来可以开始你的项目开发了！
 
-#### 项目开发，以下是一些可能的下一步：
+#### 4. [React](https://github.com/facebook/react)前端项目 连接 Django 后端项目
+```bash
+# 安装 CORS 中间件，并配置 CORS 中间件以允许来自 React 前端跨域请求
+pip install django-cors-headers 
+
+# 在 settings.py 中添加以下配置：
+INSTALLED_APPS = [
+    # ...
+    'corsheaders',
+    # ...
+]
+
+MIDDLEWARE = [
+    # ...
+    'corsheaders.middleware.CorsMiddleware',
+    # ...
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # React前端的地址
+]
+
+# 在 [React](https://github.com/facebook/react) 项目中进行 HTTP 请求：在 [React](https://github.com/facebook/react) 组件中，使用 fetch、axios 等工具进行 HTTP 请求到 Django 后端。
+fetch('http://localhost:8000/api/endpoint/')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+# 运行 [React](https://github.com/facebook/react) 前端项目：在 [React](https://github.com/facebook/react) 项目的根目录中运行。
+npm start
+```
+
+
+#### 开始项目开发，以下是一些可能的步骤：
 
 > 1.创建视图和 URL 配置： 如果您已经创建了模型并希望与数据库交互，可以开始编写视图函数和 URL 配置，以便通过 API 或网页访问您的模型数据。  
 > 2. 创建模板： 如果您计划构建网页应用程序，可以创建 HTML 模板，以便渲染和显示数据。  
