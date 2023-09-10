@@ -181,13 +181,13 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React前端的地址
 ]
 
-# 在 [React](https://github.com/facebook/react) 项目中进行 HTTP 请求：在 [React](https://github.com/facebook/react) 组件中，使用 fetch、axios 等工具进行 HTTP 请求到 Django 后端。
+# 在 React 项目中进行 HTTP 请求：在 React 组件中，使用 fetch、axios 等工具进行 HTTP 请求到 Django 后端。
 fetch('http://localhost:8000/api/endpoint/')
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
-# 运行 [React](https://github.com/facebook/react) 前端项目：在 [React](https://github.com/facebook/react) 项目的根目录中运行。
+# 运行 React 前端项目：在 React 项目的根目录中运行。
 npm start
 ```
 
