@@ -180,10 +180,8 @@ MIDDLEWARE = [
     # ...
 ]
 
-FRONTEND_URL = config('FRONTEND_URL')
-
 CORS_ALLOWED_ORIGINS = [
-    FRONTEND_URL,
+    "http://localhost:3000",  # React前端的地址
 ]
 
 # 在 React 项目中进行 HTTP 请求：在 React 组件中，使用 fetch、axios 等工具进行 HTTP 请求到 Django 后端。
