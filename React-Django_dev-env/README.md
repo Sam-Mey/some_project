@@ -183,6 +183,20 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',  # React前端的地址，'*' 表示所有源
 ]
 
+# 设置 surl.py 路由，添加以下：
+from django.contrib import admin
+from django.urls import path
+from 程序名称 import views
+
+
+urlpatterns = [
+    # 默认路由
+    path('admin/', admin.site.urls),
+    # ... 其他路由
+    path('api/endpoint/', views.endpoint_view, name='endpoint'),
+]
+
+
 # 在 React 项目中进行 HTTP 请求：在 React 组件中，使用 fetch、axios 等工具进行 HTTP 请求到 Django 后端。
 fetch('http://localhost:8000/api/endpoint/')
     .then(response => response.json())
