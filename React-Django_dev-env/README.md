@@ -189,8 +189,8 @@ fetch('http://localhost:8000/api/endpoint/')
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 
-# 运行 React 前端项目：在 React 项目的根目录中运行。
-npm start
+# Django 终端返回以下结果表示前后端连接成功。
+[11/Sep/2023 12:47:50] "GET /api/endpoint/ HTTP/1.1" 200 39
 ```
 
 
