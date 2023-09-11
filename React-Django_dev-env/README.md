@@ -163,8 +163,11 @@ python manage.py changepassword admin  # 重置超级管理员密码
 ```bash
 # 安装 CORS 中间件，并配置 CORS 中间件以允许来自 React 前端跨域请求
 pip install django-cors-headers 
+pip install python-decouple
 
-# 在 settings.py 中添加以下配置：
+# 在 settings.py 中添加以下配置：通常 FRONTEND_URL 变量保存在后端根目录 .env 文件中；（自行创建 .env）
+from decouple import config
+
 INSTALLED_APPS = [
     # ...
     'corsheaders',
@@ -177,8 +180,10 @@ MIDDLEWARE = [
     # ...
 ]
 
+FRONTEND_URL = config('FRONTEND_URL')
+
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React前端的地址
+    FRONTEND_URL,
 ]
 
 # 在 React 项目中进行 HTTP 请求：在 React 组件中，使用 fetch、axios 等工具进行 HTTP 请求到 Django 后端。
