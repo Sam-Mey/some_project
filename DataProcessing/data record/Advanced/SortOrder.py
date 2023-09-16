@@ -13,7 +13,7 @@ def process_file(input_path, output_path):
         if "期" in line:
             # 当遇到新的一期时，将前一期的数据整理并添加到formatted_data中
             if current_period and current_numbers:
-                formatted_data += f"{current_period}：{', '.join(current_numbers)}\n"
+                formatted_data += f"第{current_period}：{', '.join(current_numbers)}\n"
                 current_numbers = []  # 重置当前号码列表
             current_period = line.split('（')[0]  # 去掉开奖时间
         elif line.isdigit():
@@ -23,7 +23,7 @@ def process_file(input_path, output_path):
     
     # 处理最后一期的数据
     if current_period and current_numbers:
-        formatted_data += f"{current_period}：{', '.join(current_numbers)}\n"
+        formatted_data += f"第{current_period}：{', '.join(current_numbers)}\n"
 
     # 将整理后的数据反转顺序
     formatted_data = formatted_data.strip().split('\n')
