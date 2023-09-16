@@ -15,7 +15,7 @@ def process_file(input_path, output_path):
             if current_period and current_numbers:
                 formatted_data += f"{current_period}：{', '.join(current_numbers)}\n"
                 current_numbers = []  # 重置当前号码列表
-            current_period = line  # 更新当前期号
+            current_period = line.split('（')[0]  # 去掉开奖时间
         elif line.isdigit():
             current_numbers.append(line)  # 将数字添加到当前号码列表中
         elif line == "特":
