@@ -86,7 +86,6 @@ npx create-gatsby
 
 ##### [Expo (for native apps)](https://react.dev/learn/start-a-new-react-project) 是一个 React 框架，可让您创建具有真正本机 UI 的通用 Android、iOS 和 Web 应用程序。它为React Native提供了一个SDK，使本机部分更易于使用。要创建新的 Expo 项目，请运行：
 ```bash
-npm install -g expo-cli # 管理工具
 npx create-expo-app [项目名称]
 cd client [项目名称]
 npx expo start
