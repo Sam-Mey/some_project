@@ -37,9 +37,9 @@ DROP USER 'username'@'localhost';                               # 删除新用�
 
 #### 1. 安装与卸载 （React  ReactDOM）
 ```bash
-npm install react-scripts@latest           # 安装（或者使用以下命令）
+npm install react-scripts@latest           # 安装
 
-npm install react@latest react-dom@latest  # 安装
+npm install react@latest react-dom@latest  # 更新您项目中的 React 核心库 (react) 和用于将 React 渲染到 DOM 上的包 (react-dom) 到最新版本。
 npm uninstall -g react react-dom           # 卸载
 yarn global remove react react-dom         # yarn 卸载
 ```
