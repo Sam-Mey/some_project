@@ -93,6 +93,7 @@ npx create-gatsby
 ```bash
 yarn create expo [项目名称] # 创建项目
 cd [项目名称]               # 进入项目
+yarn init                  # 初始化项目
 yarn expo start            # 启动项目
 ```
   
