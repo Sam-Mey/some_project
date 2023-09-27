@@ -86,7 +86,7 @@ npx create-gatsby
 
 ##### [Expo (for native apps)](https://react.dev/learn/start-a-new-react-project) 是一个 React 框架，可让您创建具有真正本机 UI 的通用 Android、iOS 和 Web 应用程序。它为React Native提供了一个SDK，使本机部分更易于使用。要创建新的 Expo 项目，请运行：
 > 推荐工具
-> [Yarn](https://yarnpkg.com/)用于更快、更可靠的依赖管理。使用它代替 npm 和 npx 。
+> [Yarn](https://yarnpkg.com/) 用于更快、更可靠的依赖管理。使用它代替 npm 和 npx 。
 > VS Code 编辑器和 VS Code Expo 扩展可更轻松地进行调试和应用程序配置自动完成。
 > PowerShell（VS Code 中的默认终端）或通过 WSL 进行的 Bash，适合喜欢 Windows 的开发人员。
 > 如果您使用 [Yarn](https://yarnpkg.com/)，则可以使用以下命令引导新应用程序：
