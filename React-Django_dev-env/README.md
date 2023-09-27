@@ -35,7 +35,7 @@ DROP USER 'username'@'localhost';                               # 删除新用�
   
 > 本地开发需要安装 [Node.js](https://nodejs.org/en)。您还可以选择在生产中使用 Node.js，但不是必须的。许多 React 框架支持导出到静态 HTML/CSS/JS 文件夹。
 
-#### 1. 安装与卸载 （React  ReactDOM）
+### 1. 安装与卸载 （React  ReactDOM）
 ```bash
 npm install react-scripts@latest           # 安装
 
@@ -45,12 +45,12 @@ yarn global remove react react-dom         # yarn 卸载
 ```
 > @18.2.0 表示版本为 18.2.0，你可以在 [releases](https://github.com/facebook/react/releases) 中查看以及安装相应的版本
 
-#### 2. 安装 create-react-app：它是一个用于快速创建 React 应用的官方脚手架工具
+### 2. 安装 create-react-app：它是一个用于快速创建 React 应用的官方脚手架工具
 ```bash
 npm install -g create-react-app
 ```
 
-#### 3. 创建新的 React 项目  
+### 3. 创建新的 React 项目  
 #### 使用 React 创建前端项目 例：frontend_project [官方文档](https://react.dev/learn/start-a-new-react-project)
 ```bash
 npx create-react-app frontend_project
@@ -58,7 +58,7 @@ cd frontend_project
 npm start
 ```
   
-##### [Next.js](https://react.dev/learn/start-a-new-react-project) 是一个全栈 React 框架。它用途广泛，可让您创建任何规模的 React 应用程序 — 从大部分静态博客到复杂的动态应用程序。要创建新的 Next.js 项目，请在终端中运行：
+#### [Next.js](https://react.dev/learn/start-a-new-react-project) 是一个全栈 React 框架。它用途广泛，可让您创建任何规模的 React 应用程序 — 从大部分静态博客到复杂的动态应用程序。要创建新的 Next.js 项目，请在终端中运行：
 ```bash
 npx create-next-app frontend_project  
 cd frontend_project
@@ -74,22 +74,22 @@ npm run dev
 > √ Would you like to customize the default import alias? ... [No]() / Yes
 >  
 
-##### [Remix](https://react.dev/learn/start-a-new-react-project) 是一个带有嵌套路由的全栈 React 框架。它允许您将应用程序分解为嵌套部分，这些部分可以并行加载数据并刷新以响应用户操作。要创建新的 Remix 项目，请运行：
+#### [Remix](https://react.dev/learn/start-a-new-react-project) 是一个带有嵌套路由的全栈 React 框架。它允许您将应用程序分解为嵌套部分，这些部分可以并行加载数据并刷新以响应用户操作。要创建新的 Remix 项目，请运行：
 ```bash
 npx create-remix
 ```
 
-##### [Gatsby](https://react.dev/learn/start-a-new-react-project) 是一个 React 框架，用于快速 CMS 支持的网站。其丰富的插件生态系统及其 GraphQL 数据层简化了将内容、API 和服务集成到一个网站中的过程。要创建新的 Gatsby 项目，请运行：
+#### [Gatsby](https://react.dev/learn/start-a-new-react-project) 是一个 React 框架，用于快速 CMS 支持的网站。其丰富的插件生态系统及其 GraphQL 数据层简化了将内容、API 和服务集成到一个网站中的过程。要创建新的 Gatsby 项目，请运行：
 ```bash
 npx create-gatsby
 ```
 
-##### [Expo (for native apps)](https://react.dev/learn/start-a-new-react-project) 是一个 React 框架，可让您创建具有真正本机 UI 的通用 Android、iOS 和 Web 应用程序。它为React Native提供了一个SDK，使本机部分更易于使用。要创建新的 Expo 项目，请运行：
+#### [Expo (for native apps)](https://react.dev/learn/start-a-new-react-project) 是一个 React 框架，可让您创建具有真正本机 UI 的通用 Android、iOS 和 Web 应用程序。它为React Native提供了一个SDK，使本机部分更易于使用。要创建新的 Expo 项目，请运行：
 > 推荐工具
-> [Yarn](https://yarnpkg.com/) 用于更快、更可靠的依赖管理。使用它代替 npm 和 npx 。
-> VS Code 编辑器和 VS Code Expo 扩展可更轻松地进行调试和应用程序配置自动完成。
-> PowerShell（VS Code 中的默认终端）或通过 WSL 进行的 Bash，适合喜欢 Windows 的开发人员。
-> 如果您使用 [Yarn](https://yarnpkg.com/)，则可以使用以下命令引导新应用程序：
+> [Yarn](https://yarnpkg.com/) 用于更快、更可靠的依赖管理。使用它代替 npm 和 npx 。  
+> VS Code 编辑器和 VS Code Expo 扩展可更轻松地进行调试和应用程序配置自动完成。  
+> PowerShell（VS Code 中的默认终端）或通过 WSL 进行的 Bash，适合喜欢 Windows 的开发人员。  
+> 如果您使用 [Yarn](https://yarnpkg.com/)，则可以使用以下命令引导新应用程序：  
 ```bash
 yarn create expo [项目名称] # 创建项目
 cd [项目名称]               # 进入项目
