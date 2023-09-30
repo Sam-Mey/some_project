@@ -3,7 +3,10 @@
 ## 安装 iptable 
 
 root目录下执行：
-  
+  ```
+  # 查看操作系统
+  cat /etc/os-release
+  ```
 ```bash
 mkdir WAF-Rules
 wget https://raw.githubusercontent.com/Sam-Mey/some_project/main/WAF-Rules/iptables.sh && chmod +x iptables.sh && ./iptables.sh
