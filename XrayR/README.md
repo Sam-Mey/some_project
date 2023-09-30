@@ -34,12 +34,34 @@ docker-compose pull
 docker-compose up -d
 ```
 
-### 开启Ubuntu系统自带的BBR加速
+### 开启 Ubuntu 系统自带的 BBR 加速
 ```bash
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
 lsmod | grep bbr
+```
+
+### 某些特殊(dada)系统？！
+```hash
+sudo apt-get update
+sudo apt-get install apt-transport-https \
+  ca-certificates \
+  curl \
+  gnupg lsb-release
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+systemctl start docker
+systemctl enable docker
+
+### 安装 docker-compose
+curl -fsSL https://get.docker.com | bash -s docker
+curl -L "https://github.com/docker/compose/releases/download/1.26.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 ```
 
 ## [官方文档](https://xrayr-project.github.io/XrayR-doc/xrayr-xia-zai-he-an-zhuang/install/docker.html)
