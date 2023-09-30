@@ -11,7 +11,7 @@ Sub SetProxyTestGetData()
     
     ' 设置 URL
     Dim url As String
-    url = "https://www.macaumarksix.com/api/live2" ' 这里替换为你的接口地址
+    url = "" ' 这里替换为你的 URL 地址
     
     ' 发送 GET 请求
     WinHttpReq.Open "GET", url, False
