@@ -24,7 +24,7 @@ def process_file(input_path, output_path):
     
     # 处理最后一期的数据
     if current_period and current_numbers:
-        formatted_data += f"第{current_period}: {','.join(current_numbers)}\n"
+        formatted_data += f"第2023{current_period}: {','.join(current_numbers)}\n"
 
     # 将整理后的数据反转顺序
     formatted_data = formatted_data.strip().split('\n')
