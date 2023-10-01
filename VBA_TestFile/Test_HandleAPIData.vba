@@ -2,7 +2,7 @@
 Sub TestAPIData()
         '|========================|
         '|                        |
-        '| 这里拼接 API 数据接口  |
+        '| 这里拼接 API 数据请求  |
         '|                        |
         '| =======================|
 
@@ -37,7 +37,7 @@ Sub TestAPIData()
 
         ' 获取 Worksheet
         Dim ws As Worksheet
-        Set ws = ThisWorkbook.Sheets("Sheet3") ' 将 "Sheet1" 替换为你的工作表名称
+        Set ws = ThisWorkbook.Sheets("Sheet1") ' 将 "Sheet1" 替换为你的工作表名称
 
         ' 获取最后一行
         Dim LastRow As Long
