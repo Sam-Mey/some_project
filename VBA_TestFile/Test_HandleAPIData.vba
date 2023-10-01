@@ -47,9 +47,12 @@ Sub TestAPIData()
         Dim i As Long
         Dim found As Boolean
         found = False
-    
+
+        ' 从最后一行开始向上遍历A列
         For i = LastRow To 1 Step -1
+            ' 检查当前行A列的值是否等于expect
             If ws.Cells(i, 1).Value = expect Then
+                ' 如果相等，将found标记为True并跳出循环
                 found = True
                 Exit For
             End If
