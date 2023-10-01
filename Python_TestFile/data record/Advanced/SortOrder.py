@@ -14,7 +14,7 @@ def process_file(input_path, output_path):
         if "期" in line:
             # 当遇到新的一期时，将前一期的数据整理并添加到formatted_data中
             if current_period and current_numbers:
-                formatted_data += f"第{current_period}: {','.join(current_numbers)}\n"
+                formatted_data += f"第2023{current_period}: {','.join(current_numbers)}\n"
                 current_numbers = []  # 重置当前号码列表
             current_period = line.split('(')[0].strip()  # 去掉开奖时间后面的空格
         elif line.isdigit():
