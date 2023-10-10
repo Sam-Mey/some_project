@@ -133,7 +133,7 @@ pip install django
 
 #### 3. 创建 Django 项目
 ```bash
-django-admin startproject backend_project    # 后端项目名称 例：backend_project
+django-admin startproject backend_project .   # 后端项目名称 例：backend_project 注意后面的 '.'
 cd backend_project                           # 进入后端项目目录
 python manage.py startapp application              # 创建应用,例如：application
 ```
