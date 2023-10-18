@@ -85,15 +85,15 @@ function countdown {
 
 echo
 echo
-echo_color "green" "----------系统选择----------"
+echo_color "green" "-----------------------------------系统选择------------------------------------"
 echo
-echo_color "green" "1.CentOS"
+echo_color "green"                                  "1.CentOS"
 echo
-echo_color "green" "2.Ubuntu/Debian"
+echo_color "green"                                  "2.Ubuntu/Debian"
 echo
-echo_color "green" "3.ubuntu_debian_arm"
+echo_color "green"                                  "3.ubuntu_debian_arm"
 echo
-echo_color "green" "----------系统选择----------"
+echo_color "green" "-----------------------------------系统选择------------------------------------"
 echo
 echo
 
@@ -186,12 +186,12 @@ destination_dir2="/root/XrayR-release"
 
 # 检查目标目录是否存在，如果不存在则创建
 if [ ! -d "$destination_dir1" ]; then
-  echo_color "red" "目录不存在，无法移动config.yml"
+  echo_color "red" "目标目录不存在，无法移动config.yml"
   exit 1
 fi
 
 if [ ! -d "$destination_dir2" ]; then
-  echo_color "red" "目录不存在，无法移动docker-compose.yml"
+  echo_color "red" "目标目录不存在，无法移动docker-compose.yml"
   exit 1
 fi
 
@@ -200,7 +200,7 @@ mv config.yml "$destination_dir1"
 if [ $? -eq 0 ]; then
   echo_color "green" "config.yml 成功移动到目标目录"
 else
-  echo_color "red" "config.yml 移动失败，检查系统是否成功安装并启动 Docker!!!"
+  echo_color "red" "config.yml 移动失败"
 fi
 
 # 移动docker-compose.yml到目标目录2
@@ -208,7 +208,7 @@ mv docker-compose.yml "$destination_dir2"
 if [ $? -eq 0 ]; then
   echo_color "green" "docker-compose.yml 成功移动到目标目录"
 else
-  echo_color "red" "docker-compose.yml 移动失败，检查系统是否成功安装并启动 Docker!!!"
+  echo_color "red" "docker-compose.yml 移动失败"
 fi
 
 # 执行
