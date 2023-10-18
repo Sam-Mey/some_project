@@ -85,7 +85,7 @@ function countdown {
 
 echo
 echo
-echo_color "green" "-----------------------------------系统选择------------------------------------"
+echo_color "green" "----------系统选择----------"
 echo
 echo_color "green"    "1.CentOS"
 echo
@@ -93,7 +93,7 @@ echo_color "green"    "2.Ubuntu/Debian"
 echo
 echo_color "green"    "3.ubuntu_debian_arm"
 echo
-echo_color "green" "-----------------------------------系统选择------------------------------------"
+echo_color "green" "----------系统选择----------"
 echo
 echo
 
