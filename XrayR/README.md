@@ -13,7 +13,7 @@
 ```bash
 wget https://raw.githubusercontent.com/Sam-Mey/some_project/main/XrayR/install_XrayR.sh \
      https://raw.githubusercontent.com/Sam-Mey/some_project/main/XrayR/update_XrayR.sh \
-  && chmod +x install_XrayR.sh update.sh \
+  && chmod +x install_XrayR.sh update_XrayR.sh \
   && ./install_XrayR.sh
 ```
 
