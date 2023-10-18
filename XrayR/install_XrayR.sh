@@ -217,7 +217,11 @@ xrayr_release_dir="/root/XrayR-release"
 
 # 切换到XrayR-release目录
 cd "$xrayr_release_dir"
-docker-compose up -d
+
+docker-compose -f XrayR-release/docker-compose.yml up -d
+
+cd "$root_dir"
+rm -rf install_XrayR.sh
 
 # 执行其他操作，进入目录后可以在这里执行任何需要在XrayR-release目录中完成的任务
 # 例如：运行XrayR程序等
