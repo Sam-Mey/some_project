@@ -12,7 +12,7 @@
 ### 务必在 `root` 目录下执行一键安装
 ```bash
 wget https://raw.githubusercontent.com/Sam-Mey/some_project/main/XrayR/install_XrayR.sh \
-     https://raw.githubusercontent.com/Sam-Mey/some_project/main/XrayR/update.sh \
+     https://raw.githubusercontent.com/Sam-Mey/some_project/main/XrayR/update_XrayR.sh \
   && chmod +x install_XrayR.sh update.sh \
   && ./install_XrayR.sh
 ```
