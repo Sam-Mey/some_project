@@ -52,6 +52,28 @@ curl -L "https://github.com/docker/compose/releases/download/latest/docker-compo
 chmod +x /usr/local/bin/docker-compose
 ```
 
+# 创建目录
+
+```bash
+cd /
+mkdir www
+cd www
+mkdir backup server wwwlogs wwwroot
+cd server
+mkdir mysql nginx php phpmyadmin redis
+cd nginx
+mkdir conf certs
+cd conf
+touch nginx.conf
+cd /www/server/php
+mkdir etc bin
+cd etc
+touch php.ini
+cd /www/wwwroot
+mkdir 存放项目的文件夹
+cd /
+```
+
 # 安装 Docker 图形化管理 portainer：
 ```bash
 docker volume create portainer_data
@@ -64,8 +86,10 @@ docker restart portainer
 
 # 卸载：  
 
-Ubuntu/Debian；如果是 CentOS 系统用 `sudo yum remove docker-ce docker-ce-cli containerd.io
-`
+Ubuntu/Debian；  
+
+如果是 CentOS 系统用 `sudo yum remove docker-ce docker-ce-cli containerd.io`
+
 ```bash
 sudo systemctl stop docker
 sudo apt-get purge docker-ce docker-ce-cli containerd.io -y
