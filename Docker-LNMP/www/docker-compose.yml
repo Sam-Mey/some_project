@@ -1,0 +1,94 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d:ro   # 根据你的目录结构进行修改
+      - /www/wwwroot/sspanel:/var/www/html   # 根据你的目录结构进行修改
+      - ./certs:/etc/nginx/certs/
+    depends_on:
+      - php
+      - mariadb
+    networks:
+      - my_network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+
+  mariadb:
+    image: mariadb:10.11
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_DATABASE: your_database_name
+      MYSQL_USER: your_mysql_user
+      MYSQL_PASSWORD: your_mysql_password
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      - my_network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+
+  redis:
+    image: redis:7.0
+    restart: always
+    volumes:
+      - redis_data:/data
+    depends_on:
+      - php
+    networks:
+      - my_network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+
+  php:
+    image: php:8.2-fpm
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./php:/usr/local/etc/php/conf.d:ro   # 根据你的目录结构进行修改
+      - /www/wwwroot/sspanel:/var/www/html   # 根据你的目录结构进行修改
+    depends_on:
+      - mariadb
+    networks:
+      - my_network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+
+  phpmyadmin:
+    image: arm64v8/phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mariadb
+      MYSQL_ROOT_PASSWORD: your_root_password
+    depends_on:
+      - mariadb
+    networks:
+      - my_network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+
+volumes:
+  mariadb_data:
+  redis_data:
+
+networks:
+  my_network:
+    driver: bridge
