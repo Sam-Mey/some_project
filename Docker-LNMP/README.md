@@ -67,8 +67,6 @@ cd conf
 touch nginx.conf
 cd /www/server/php
 mkdir etc bin
-cd etc
-touch php.ini
 cd /www/wwwroot
 mkdir 存放项目的文件夹
 cd /
