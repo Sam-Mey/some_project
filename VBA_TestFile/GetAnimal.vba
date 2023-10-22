@@ -1,101 +1,85 @@
-' 22 偏移法
+' 22 偏移法（未去重）
 
-Sub 生肖计算()
+Sub 生肖判断()
 
+    Dim lastRow As Long
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Sheet3") ' 将 "Sheet1" 替换为你实际使用的工作表名
-
-    Dim LastRow As Long
-    LastRow = ws.Cells(ws.Rows.count, "U").End(xlUp).Row
-
     Dim UValue As Integer
     Dim Result As String
-    Dim i As Long
-
-    For i = 2 To LastRow ' 从第2行开始循环
+    Dim i As Long, j As Long
+    
+    ' 初始化工作表和LastRow
+    Set ws = ThisWorkbook.Sheets("Sheet3") ' 将Sheet1替换为你的工作表名称
+    lastRow = ws.Cells(ws.Rows.count, "U").End(xlUp).Row
+    
+    ' 循环处理每一行数据
+    For i = 2 To lastRow ' 从第2行开始循环
         If Not IsEmpty(ws.Cells(i, "U")) Then ' 如果U列不为空
             UValue = ws.Cells(i, "U").Value
             Result = ""
 
             ' 判断条件并生成Result
             If (UValue - 8) <= 22 Then
-                Result = Result & CStr((UValue - 8) + 22) & ","
+                Result = Result & GetAnimal((UValue - 8) + 22) & ","
             Else
-                Result = Result & CStr((UValue - 8) - 22) & ","
+                Result = Result & GetAnimal((UValue - 8) - 22) & ","
             End If
 
             If (UValue - 7) <= 22 Then
-                Result = Result & CStr((UValue - 7) + 22) & ","
+                Result = Result & GetAnimal((UValue - 7) + 22) & ","
             Else
-                Result = Result & CStr((UValue - 7) - 22) & ","
+                Result = Result & GetAnimal((UValue - 7) - 22) & ","
             End If
 
             If (UValue - 6) <= 22 Then
-                Result = Result & CStr((UValue - 6) + 22) & ","
+                Result = Result & GetAnimal((UValue - 6) + 22) & ","
             Else
-                Result = Result & CStr((UValue - 6) - 22) & ","
+                Result = Result & GetAnimal((UValue - 6) - 22) & ","
             End If
 
             If (UValue - 1) <= 22 Then
-                Result = Result & CStr((UValue - 1) + 22) & ","
+                Result = Result & GetAnimal((UValue - 1) + 22) & ","
             Else
-                Result = Result & CStr((UValue - 1) - 22) & ","
+                Result = Result & GetAnimal((UValue - 1) - 22) & ","
             End If
 
             If (UValue + 0) <= 22 Then
-                Result = Result & CStr((UValue + 0) + 22) & ","
+                Result = Result & GetAnimal((UValue + 0) + 22) & ","
             Else
-                Result = Result & CStr((UValue + 0) - 22) & ","
+                Result = Result & GetAnimal((UValue + 0) - 22) & ","
             End If
 
             If (UValue + 1) <= 22 Then
-                Result = Result & CStr((UValue + 1) + 22) & ","
+                Result = Result & GetAnimal((UValue + 1) + 22) & ","
             Else
-                Result = Result & CStr((UValue + 1) - 22) & ","
+                Result = Result & GetAnimal((UValue + 1) - 22) & ","
             End If
 
             If (UValue + 6) <= 22 Then
-                Result = Result & CStr((UValue + 6) + 22) & ","
+                Result = Result & GetAnimal((UValue + 6) + 22) & ","
             Else
-                Result = Result & CStr((UValue + 6) - 22) & ","
+                Result = Result & GetAnimal((UValue + 6) - 22) & ","
             End If
 
             If (UValue + 7) <= 22 Then
-                Result = Result & CStr((UValue + 7) + 22) & ","
+                Result = Result & GetAnimal((UValue + 7) + 22) & ","
             Else
-                Result = Result & CStr((UValue + 7) - 22) & ","
+                Result = Result & GetAnimal((UValue + 7) - 22) & ","
             End If
 
             If (UValue + 8) <= 22 Then
-                Result = Result & CStr((UValue + 8) + 22) & ","
+                Result = Result & GetAnimal((UValue + 8) + 22) & ","
             Else
-                Result = Result & CStr((UValue + 8) - 22) & ","
+                Result = Result & GetAnimal((UValue + 8) - 22) & ","
             End If
 
             If Len(Result) > 0 Then
                 Result = Left(Result, Len(Result) - 1)
             End If
 
-            ' 根据生成的Result匹配动物
-            Dim Animals() As String
-            Animals = Split(Result, ",") ' 将Result按逗号拆分成动物列表
-
-            Dim Animal As String
-            Dim FinalResult As String
-            Dim j As Integer
-
-            For j = LBound(Animals) To UBound(Animals)
-                Animal = GetAnimal(CInt(Animals(j))) ' 获取对应的动物
-                If InStr(FinalResult, Animal) = 0 Then ' 检查动物是否已经在FinalResult中
-                    FinalResult = FinalResult & Animal & "," ' 如果不在则添加
-                End If
-            Next j
-
-            If Len(FinalResult) > 0 Then
-                FinalResult = Left(FinalResult, Len(FinalResult) - 1) ' 去掉最后的逗号
-            End If
-
-            ws.Cells(i, "W").Value = FinalResult ' 将最终结果写入对应的W列
+            ' 将动物名称写入W列
+'            ws.Cells(i, "W").Value = Result
+            ws.Cells(i + 1, "W").Value = Result
         End If
     Next i
 End Sub
