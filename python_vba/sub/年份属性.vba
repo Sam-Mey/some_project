@@ -10,8 +10,9 @@
 '####                                                                                                                                                                               ####
 Sub 年份生肖()
     ' 设置公历日期格式
-    Dim gongLiDate As String
-    gongLiDate = Format(Date, "yyyy年mm月dd日，") & WeekdayName(Weekday(Date), True, vbMonday) & "，" & "兔" & " " & "年"
+    Dim gongLiDate
+    gongLiDate = Format(Date, "yyyy年mm月dd日") & "，" & WeekdayName(Weekday(Date), True, vbSunday) & "，" & "兔" & " " & "年"
+    Debug.Print gongLiDate ' 调试
     
     ' 设置农历年
     Dim nongLiYear As String
