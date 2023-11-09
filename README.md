@@ -12,3 +12,14 @@
 8. [一键 XrayR 安装 ](https://github.com/Sam-Mey/some_project/tree/main/XrayR)
 9. [ssPanel 面板搭建 ](https://github.com/Sam-Mey/some_project/tree/main/ssPanel)
 10. [warp_1.1.1.1 解锁流媒体 （未完成）... ](https://github.com/Sam-Mey/some_project/tree/main/warp_1.1.1.1)
+
+
+#### 后记：呼出脚本
+```bash
+# 设置
+vim ./bashrc
+# 路径
+命令() {
+    /your/file/path/script.sh
+}
+```
