@@ -9,7 +9,7 @@
 > 5. 默认下一步直到安装完成。
 > 6. 进入到 MySQL 安装目录，例：E:\MySQL\MySQL Server 8.1\bin
 > 7. 输入 `mysql -u root -p` 
-> 8. 输入 设置 root 密码 既可以连接到数据库 
+> 8. 输入 设置 root 密码 登录到数据库 
 
 ##### 相关命令：
 ```bash
