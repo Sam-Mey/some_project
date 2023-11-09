@@ -149,7 +149,7 @@ python manage.py startapp application              # 创建应用,例如：appli
 ```bash
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
         'NAME': 'your_database_name',               # 数据库 名
         'USER': 'your_database_user',               # 数据库 用户名
         'PASSWORD': 'your_database_password',       # 数据库 密码
@@ -160,7 +160,7 @@ DATABASES = {
 ```
 
 ```bash
-pip install mysqlclient                # 安装 MySQL 模块
+pip install mysql-connector-python     # 安装 MySQL 模块
 python manage.py makemigrations        # 生成数据库迁移文件
 python manage.py migrate               # 运行数据库迁移
 python manage.py createsuperuser       # 创建超级管理员
