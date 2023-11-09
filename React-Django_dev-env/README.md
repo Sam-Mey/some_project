@@ -161,6 +161,7 @@ DATABASES = {
 
 ```bash
 pip install mysql-connector-python     # 安装 MySQL 模块
+pip install pymysql                    # 安装依赖
 python manage.py makemigrations        # 生成数据库迁移文件
 python manage.py migrate               # 运行数据库迁移
 python manage.py createsuperuser       # 创建超级管理员
