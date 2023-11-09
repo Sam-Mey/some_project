@@ -150,11 +150,11 @@ python manage.py startapp application              # 创建应用,例如：appli
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'your_database_name',
-        'USER': 'your_database_user',
-        'PASSWORD': 'your_database_password',
-        'HOST': 'your_database_host',  # 默认为 'localhost'，如果 MySQL 在本地，请保留
-        'PORT': 'your_database_port',  # 默认为 '3306'
+        'NAME': 'your_database_name',               # 数据库 名
+        'USER': 'your_database_user',               # 数据库 用户名
+        'PASSWORD': 'your_database_password',       # 数据库 密码
+        'HOST': 'your_database_host',               # 默认为 'localhost'，如果 MySQL 在本地，请保留
+        'PORT': 'your_database_port',               # 默认为 '3306'
     }
 }
 ```
