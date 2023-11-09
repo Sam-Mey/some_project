@@ -143,8 +143,9 @@ python manage.py startapp application              # 创建应用,例如：appli
 ```
 #### 配置数据库：
 > 打开 `settings.py` 文件，配置数据库连接。默认情况下，Django 使用 SQLite 数据库。您可以在 DATABASES 部分配置数据库连接信息，例如使用 MySQL 或 PostgreSQL；以 MySQL 为例：
->   
-```
+>
+> 如果使用默认 SQLite 数据库 则无需配置
+```bash
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
