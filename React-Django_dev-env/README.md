@@ -185,17 +185,18 @@ FLUSH PRIVILEGES;
 SELECT user, host FROM mysql.user;
 ```
 
-> 如果下表示允许：
->  
-> +------------------+-----------+
-> | user             | host      |
-> +------------------+-----------+
-> | mysql.infoschema | localhost |
-> | mysql.session    | localhost |
-> | mysql.sys        | localhost |
-> | root             | localhost |
-> | XXXXX            | localhost |
-> +------------------+-----------+
+```bash
+# 如下表示允许：
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
+| XXXXX            | localhost |
++------------------+-----------+
+```
 
 ```bash
 DATABASES = {
