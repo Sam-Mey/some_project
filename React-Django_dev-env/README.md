@@ -2,7 +2,7 @@
 
 ## 安装数据库 [MySQL](https://dev.mysql.com/downloads/mysql/)
 
-### [Nginx](https://nginx.org/en/download.html)
+### [Nginx（可选）](https://nginx.org/en/download.html)
 
 ### [phpMyAdmin（可选）](https://www.phpmyadmin.net/)
 
