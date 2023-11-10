@@ -1,7 +1,15 @@
 # 本地搭建 [React](https://github.com/facebook/react) + Django 前后端项目分离的开发环境 (Windows)
 
+## 安装数据库 [MySQL](https://dev.mysql.com/downloads/mysql/)
 
-## 安装数据库 [MySQL](https://dev.mysql.com/downloads/mysql/)，[Nginx](https://nginx.org/en/download.html)，[phpMyAdmin（可选）](https://www.phpmyadmin.net/)
+### [Nginx](https://nginx.org/en/download.html)
+
+### [phpMyAdmin（可选）](https://www.phpmyadmin.net/)
+
+### [Node.js](https://nodejs.org/en)
+
+### [Python](https://www.python.org/)
+
 >
 > 1. 下载 [Windows (x86, 64-bit), MSI Installer](https://dev.mysql.com/downloads/mysql/)  （这里使用的是 MySQL 8.1）
 > 2. 根据提示安装，（这里用的是 自定义安装 指定位置）
