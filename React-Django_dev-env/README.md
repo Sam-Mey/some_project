@@ -57,7 +57,7 @@ npm install -g create-react-app
 
 ### 3. 创建新的 React 项目  
 
-#### 使用 React 创建前端项目 例：frontend_project [官方文档](https://react.dev/learn/start-a-new-react-project)
+#### 使用 React 创建前端项目 例：frontend_project [官方文档](https://react.dev/)
 
 ```bash
 npx create-react-app frontend_project
