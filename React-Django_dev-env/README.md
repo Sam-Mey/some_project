@@ -219,13 +219,6 @@ DATABASES = {
 }
 ```
 
-#### 使用 `mysql-connector-python` 来连接 MySQL 数据库
-
-```bash
-pip install mysql-connector-python     # 安装 MySQL 模块
-pip install pymysql                    # 安装依赖
-```
-
 #### 定义模型：在 `application/models.py` 文件中定义你的模型类，例如
 
 ```bash
@@ -248,6 +241,13 @@ INSTALLED_APPS = [
     'myapp', # 如你创建的应用为 myapp
     # ...
 ]
+```
+
+#### 使用 `mysql-connector-python` 来连接 MySQL 数据库
+
+```bash
+pip install mysql-connector-python     # 安装 MySQL 模块
+pip install pymysql                    # 安装依赖
 ```
 
 ```bash
