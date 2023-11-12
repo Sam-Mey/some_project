@@ -187,7 +187,7 @@ GRANT ALL PRIVILEGES ON 用户.* TO '用户'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
-#### 检查 MySQL 数据库允许用户 '数据库名'@'localhost' 连接x
+#### 检查 MySQL 数据库允许用户 '数据库名'@'localhost' 连接
 
 ```bash
 SELECT user, host FROM mysql.user;
