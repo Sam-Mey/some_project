@@ -62,17 +62,28 @@ yarn install
 # 然后，Yarn 会将您的项目配置为使用最新的稳定二进制文件。
 ```
 
-> Yarn 还经常发布候选版本。如果您需要尚未在稳定频道上发布的功能，请使用 yarn set version canary。这些版本非常稳定，与常规频道的唯一区别是，当我们实施新的重大更改时，主要版本之间的迁移更加交错。
+> Yarn 还经常发布候选版本。如果您需要尚未在稳定频道上发布的功能，请使用 `yarn set version canary`。这些版本非常稳定，与常规频道的唯一区别是，当我们实施新的重大更改时，主要版本之间的迁移更加交错。
 >  
 > 从 master 全新安装最新版本
 > 您可能想要测试最近的 Yarn 版本，该版本尚未在候选发布版本中发布，甚至尚未合并。以下命令将直接从我们的存储库克隆、构建和安装 Yarn 到您的项目中：
 >  
-> yarn set version from sources
+> `yarn set version from sources`
 > 它接受可用于测试特定 PR 的标志：--branch
 >  
-> yarn set version from sources --branch 1211
-> 与稳定版和金丝雀频道不同，yarn set version from sources 命令不能利用 Corepack，需要将 Yarn 二进制文件存储在文件夹中，并从项目文件中引用它。.yarn/releases.yarnrc.yml架
-  
+> `yarn set version from sources --branch 1211`
+> 与稳定版和金丝雀频道不同，`yarn set version from sources` 命令不能利用 Corepack，需要将 Yarn 二进制文件存储在文件夹中，并从项目文件中引用它。.yarn/releases.yarnrc.yml
+
+## 用法
+
+> 如果你来自 npm，主要变化是：
+>  
+> 运行 yarn 足以运行安装！它是 `yarn install` 的别名。
+> 向单个包添加或更新依赖项是通过 `yarn add` 完成的。
+> 升级整个项目中的依赖项是通过 `yarn up` 完成的。
+> 您的脚本是别名的。调用 `yarn build` 和 `yarn run build` 是一样的！
+> 大多数与注册表相关的命令都移到了 `yarn npm` 后面（例如： `yarn npm audit`）。
+> 要查看命令的完整列表，请查看 [CLI](https://yarnpkg.com/cli) 参考。
+
 ## 设置 Django 后端框架
 
 > [官网]( https://www.djangoproject.com/)  
@@ -80,7 +91,7 @@ yarn install
 > [教程（Tutorials）](https://docs.djangoproject.com/en/stable/intro/tutorial01/ )  
 >  
 > 安装 Django 之前，请确保你已经安装了 [Python](https://www.python.org/) 与编辑器 [vscode](https://code.visualstudio.com/)，并设置好环境变量。  
-> 安装虚拟环境（可选）,虽然不是必需的，但建议在项目中使用 [Python](https://www.python.org/) 虚拟环境，以隔离不同项目的依赖关系。在命令行中运行以下命令来创建和激活虚拟环境： 
+> 安装虚拟环境（可选）,虽然不是必需的，但建议在项目中使用 [Python](https://www.python.org/) 虚拟环境，以隔> 离不同项目的依赖关系。在命令行中运行以下命令来创建和激活虚拟环境:
   
 ### 1. 创建虚拟环境的目录，打开 cmd 切换到要创建虚拟环境的目录；如：D:\project
 
