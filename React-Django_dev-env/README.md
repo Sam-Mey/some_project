@@ -47,10 +47,10 @@ DROP USER 'username'@'localhost';                               # 删除新用�
 # 帮助信息
 yarn init -h
 
-# 管理员运行 cmd
+# 1.启用 Corepack, 管理员运行 cmd
 corepack enable
 
-# 然后初始化一个新项目：
+# 2.然后初始化一个新项目：
 yarn init -2
 
 # 更新 Yarn
