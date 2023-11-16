@@ -2,10 +2,6 @@
 
 ## 安装数据库 [MySQL](https://dev.mysql.com/downloads/mysql/)
 
-### [Nginx（可选）](https://nginx.org/en/download.html)
-
-### [phpMyAdmin（可选）](https://www.phpmyadmin.net/)
-
 ### [Node.js](https://nodejs.org/en)
 
 ### [Python](https://www.python.org/)
@@ -41,100 +37,42 @@ CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';    # 创建新用�
 DROP USER 'username'@'localhost';                               # 删除新用户
 ```
 
-## 安装 react 前端框架
-  
-> 本地开发需要安装 [Node.js](https://nodejs.org/en)。您还可以选择在生产中使用 Node.js，但不是必须的。许多 React 框架支持导出到静态 HTML/CSS/JS 文件夹。
+## 安装 [Yarn](https://yarnpkg.com/)
 
-### 1. 安装与卸载 （React  ReactDOM）
-
-```bash
-npm install react-scripts@latest           # 安装
-
-npm install react@latest react-dom@latest  # 更新您项目中的 React 核心库 (react) 和用于将 React 渲染到 DOM 上的包 (react-dom) 到最新版本。
-npm uninstall -g react react-dom           # 卸载
-yarn global remove react react-dom         # yarn 卸载
-```
-
-> @18.2.0 表示版本为 18.2.0，你可以在 [releases](https://github.com/facebook/react/releases) 中查看以及安装相应的版本
-
-### 2. 安装 create-react-app：它是一个用于快速创建 React 应用的官方脚手架工具
-
-```bash
-npm install -g create-react-app
-```
-
-### 3. 创建新的 React 项目  
-
-#### 使用 React 创建前端项目 例：frontend_project [官方文档](https://react.dev/)
-
-```bash
-npx create-react-app frontend_project
-cd frontend_project
-npm start
-```
-  
-#### [Next.js](https://react.dev/learn/start-a-new-react-project) 是一个全栈 React 框架。它用途广泛，可让您创建任何规模的 React 应用程序 — 从大部分静态博客到复杂的动态应用程序。要创建新的 Next.js 项目，请在终端中运行：
-
-```bash
-npx create-next-app frontend_project  
-cd frontend_project
-npm run dev
-```
-
-> 当你使用 npx create-next-app [项目名称] 创建前端项目时会出现以下交互：  
+> 管理 [Yarn](https://yarnpkg.com) 的首选方法是按项目和 [Corepack](https://yarnpkg.com/corepack)（Node.js 默认附带的工具）。Yarn 的现代版本并不意味着全局安装，也不意味着从 npm 安装。
 >  
-> √ Would you like to use TypeScript? ... No / [Yes]()  
-> √ Would you like to use ESLint? ... No / [Yes]()  
-> √ Would you like to use Tailwind CSS? ... No / [Yes]()  
-> √ Would you like to use `src/` directory? ... No / [Yes]()  
-> √ Would you like to use App Router? (recommended) ... No / [Yes]()  
-> √ Would you like to customize the default import alias? ... [No]() / Yes
+> 首先启用 [Corepack](https://yarnpkg.com/corepack)（如果尚未启用）;这会将 yarn 二进制文件添加到您的 PATH 中：
+
+```bash
+# 帮助信息
+yarn init -h
+
+# 管理员运行 cmd
+corepack enable
+
+# 然后初始化一个新项目：
+yarn init -2
+
+# 更新 Yarn
+# 每当您想将 Yarn 更新到最新版本时，只需运行：
+
+yarn set version stable
+yarn install
+
+# 然后，Yarn 会将您的项目配置为使用最新的稳定二进制文件。
+```
+
+> Yarn 还经常发布候选版本。如果您需要尚未在稳定频道上发布的功能，请使用 yarn set version canary。这些版本非常稳定，与常规频道的唯一区别是，当我们实施新的重大更改时，主要版本之间的迁移更加交错。
 >  
-
-#### [Remix](https://react.dev/learn/start-a-new-react-project) 是一个带有嵌套路由的全栈 React 框架。它允许您将应用程序分解为嵌套部分，这些部分可以并行加载数据并刷新以响应用户操作。要创建新的 Remix 项目，请运行：
-
-```bash
-npx create-remix
-```
-
-#### [Gatsby](https://react.dev/learn/start-a-new-react-project) 是一个 React 框架，用于快速 CMS 支持的网站。其丰富的插件生态系统及其 GraphQL 数据层简化了将内容、API 和服务集成到一个网站中的过程。要创建新的 Gatsby 项目，请运行
-
-```bash
-npx create-gatsby
-```
-
-#### [Expo (for native apps)](https://react.dev/learn/start-a-new-react-project) 是一个 React 框架，可让您创建具有真正本机 UI 的通用 Android、iOS 和 Web 应用程序。它为React Native提供了一个SDK，使本机部分更易于使用。要创建新的 Expo 项目，请运行
-
-```bash
-npx create-expo-app
-```  
-
-> 推荐工具
-> [Yarn](https://yarnpkg.com/) 用于更快、更可靠的依赖管理。使用它代替 npm 和 npx 。  
-> VS Code 编辑器和 VS Code Expo 扩展可更轻松地进行调试和应用程序配置自动完成。  
-> PowerShell（VS Code 中的默认终端）或通过 WSL 进行的 Bash，适合喜欢 Windows 的开发人员。  
-> 如果您使用 [Yarn](https://yarnpkg.com/)，则可以使用以下命令引导新应用程序：  
-
-```bash
-yarn create expo [项目名称] # 创建项目
-cd [项目名称]               # 进入项目
-yarn init                  # 初始化项目
-yarn expo start            # 启动项目
-```
+> 从 master 全新安装最新版本
+> 您可能想要测试最近的 Yarn 版本，该版本尚未在候选发布版本中发布，甚至尚未合并。以下命令将直接从我们的存储库克隆、构建和安装 Yarn 到您的项目中：
+>  
+> yarn set version from sources
+> 它接受可用于测试特定 PR 的标志：--branch
+>  
+> yarn set version from sources --branch 1211
+> 与稳定版和金丝雀频道不同，yarn set version from sources 命令不能利用 Corepack，需要将 Yarn 二进制文件存储在文件夹中，并从项目文件中引用它。.yarn/releases.yarnrc.yml架
   
-> 此时就可以访问 http://localhost:3000/ ,不出意外你将会看到一下界面：[React](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/React.png)  [Next.js](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Nextjs.png)
->
-> 接下来你可以开始你的前端项目开发了
-  
-##### React 相关命令
-
-```bash
-npm start     # 启动开发服务器,允许你在本地开发环境中实时预览你的 [React](https://github.com/facebook/react) 应用。当你运行这个命令时，它将启动一个本地服务器并在浏览器中打开应用。你可以在开发服务器中进行代码修改，它会自动重新加载以显示更新。
-npm run build # 用于创建生产环境中使用的优化过的静态文件。当你准备将你的React应用部署到生产环境时，运行这个命令会将所有的代码和资源打包成一个或多个优化的静态文件。这些文件可以更有效地加载和运行，提供更好的性能。
-npm test      # 用于启动测试运行器，以运行你的单元测试和集成测试。在开发过程中，编写测试可以帮助你捕捉潜在的问题，确保代码的质量和稳定性。
-npm run eject # 用于 "弹出" 你的应用，将构建依赖、配置文件和脚本复制到应用目录中。通过执行此命令，你将不再依赖于 create-react-app 提供的开发环境和配置，但请注意，一旦弹出，就不能撤销操作。这个命令可以让你更深入地自定义项目的构建配置。
-```
-
 ## 设置 Django 后端框架
 
 > [官网]( https://www.djangoproject.com/)  
