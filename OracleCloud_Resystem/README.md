@@ -13,7 +13,7 @@
 apt update -y
 apt install wget -y
 cd /boot/efi/EFI
-wget https://github.com/netbootxyz/netboot.xyz/releases/download/latest/netboot.xyz-arm64.efi
+wget https://github.com/netbootxyz/netboot.xyz/releases/download/2.0.74/netboot.xyz-arm64.efi
 ```
   
 #### CentOS arm64
