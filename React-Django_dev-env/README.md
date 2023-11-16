@@ -78,19 +78,27 @@ yarn install
 > 如果你来自 npm，主要变化是：
 >  
 > 运行 yarn 足以运行安装！它是 `yarn install` 的别名。
+>  
 > 向单个包添加或更新依赖项是通过 `yarn add` 完成的。
+>  
 > 升级整个项目中的依赖项是通过 `yarn up` 完成的。
+>  
 > 您的脚本是别名的。调用 `yarn build` 和 `yarn run build` 是一样的！
+>  
 > 大多数与注册表相关的命令都移到了 `yarn npm` 后面（例如： `yarn npm audit`）。
+>  
 > 要查看命令的完整列表，请查看 [CLI](https://yarnpkg.com/cli) 参考。
 
 ## 设置 Django 后端框架
 
-> [官网]( https://www.djangoproject.com/)  
-> [官方文档]( https://docs.djangoproject.com/)  
-> [教程（Tutorials）](https://docs.djangoproject.com/en/stable/intro/tutorial01/ )  
+> [官网]( https://www.djangoproject.com/)
 >  
-> 安装 Django 之前，请确保你已经安装了 [Python](https://www.python.org/) 与编辑器 [vscode](https://code.visualstudio.com/)，并设置好环境变量。  
+> [官方文档]( https://docs.djangoproject.com/)
+>  
+> [教程（Tutorials）](https://docs.djangoproject.com/en/stable/intro/tutorial01/ )
+>  
+> 安装 Django 之前，请确保你已经安装了 [Python](https://www.python.org/) 与编辑器 [vscode](https://code.visualstudio.com/)，并设置好环境变量。
+>  
 > 安装虚拟环境（可选）,虽然不是必需的，但建议在项目中使用 [Python](https://www.python.org/) 虚拟环境，以隔> 离不同项目的依赖关系。在命令行中运行以下命令来创建和激活虚拟环境:
   
 ### 1. 创建虚拟环境的目录，打开 cmd 切换到要创建虚拟环境的目录；如：D:\project
