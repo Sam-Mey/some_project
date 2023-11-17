@@ -12,7 +12,7 @@ mkdir WAF-Rules
 wget https://raw.githubusercontent.com/Sam-Mey/some_project/main/WAF-Rules/iptables.sh && chmod +x iptables.sh && ./iptables.sh
 ```
 
-#### 查看 当前 IPTables（Linux 防火墙）的开放端口情况：
+#### 查看 当前 IPTables（Linux 防火墙）规则：
 ```
 sudo iptables -L -n
 ```
