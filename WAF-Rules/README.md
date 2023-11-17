@@ -26,7 +26,7 @@ ss -tuln | grep LISTEN                    # 输出所有正在监听的套接字
 
 #### 查看系统上所有端口的开放情况：
 ```
-sudo netstat -tuln
+sudo ss -tulwn
 ```
 
 #### 查看TCP端口：
