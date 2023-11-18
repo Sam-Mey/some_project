@@ -21,7 +21,7 @@ wget https://github.com/netbootxyz/netboot.xyz/releases/download/2.0.74/netboot.
 yum update -y
 yum apt
 cd /boot/efi/EFI
-wget https://boot.netboot.xyz/ipxe/netboot.xyz-arm64.efi
+wget https://github.com/netbootxyz/netboot.xyz/releases/download/2.0.74/netboot.xyz-arm64.efi
 ```
   
 #### x86_64
