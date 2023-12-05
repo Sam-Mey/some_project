@@ -19,4 +19,12 @@ wget https://github.com/netbootxyz/netboot.xyz/releases/download/2.0.74/netboot.
 
 ### 4.选择 Boot Maintenance Manager —> EFI —> netboot.xyz-arm64.efi，点击回车，进行引导
 
-< img src= "" />
+<img src="https://github.com/Sam-Mey/some_project/blob/main/OracleCloud_Resystem/CentOS/img/1.jpg" />
+
+<img src="https://github.com/Sam-Mey/some_project/blob/main/OracleCloud_Resystem/CentOS/img/2.jpg" />
+
+<img src="https://github.com/Sam-Mey/some_project/blob/main/OracleCloud_Resystem/CentOS/img/3.jpg" />
+
+### 5.选择 Linux Network Installs (arm64)
+
+<img src="https://github.com/Sam-Mey/some_project/blob/main/OracleCloud_Resystem/CentOS/img/4.jpg" />
