@@ -76,7 +76,7 @@ wget https://github.com/netbootxyz/netboot.xyz/releases/download/2.0.74/netboot.
 
 <img src="https://github.com/Sam-Mey/some_project/blob/main/OracleCloud_Resystem/Ubuntu/img/1%20(11).png" />
 
-# 18.必要的修改，（如不修改此项，在 SSH 终端切换到 root 用户时会多一步密码验证）
+# 必要的修改，（如不修改此项，在 SSH 终端切换到 root 用户时会多一步密码验证）
 ### 1.打开终端并输入以下命令以编辑sudoers文件：
 ```bash
 sudo visudo
