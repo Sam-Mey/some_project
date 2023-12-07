@@ -1,11 +1,11 @@
 # docker 安装 SSPanel UIM
 
-> 1.Ubuntu 22.04
-> 2.Nginx
-> 3.PHP
-> 4.MariaDB
-> 5.Redis
-> 6.phpMyAdmin
+> 1.Ubuntu 22.04  
+> 2.Nginx  
+> 3.PHP  
+> 4.MariaDB  
+> 5.Redis  
+> 6.phpMyAdmin  
 
 ## 1.安装 Docker，参阅 [Docker LNMP]()
 
