@@ -16,18 +16,17 @@
 cd /
 mkdir www
 cd www
-mkdir backup server wwwlogs wwwroot
+mkdir server wwwlogs wwwroot
 cd server
-mkdir mariadb nginx php phpMyAdmin redis
+mkdir mysql nginx php phpmyadmin redis
 cd nginx
-mkdir conf certs
-cd conf
 touch nginx.conf
+mkdir certs
 cd /www/server/php
 mkdir etc bin
 cd /www/wwwroot
-mkdir SSPanel
-cd /
+mkdir 存放项目的文件夹
+cd 存放项目的文件夹
 ```
 ## 3.编写配置文件：
 
