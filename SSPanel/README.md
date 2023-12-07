@@ -1,5 +1,7 @@
-# docker 安装 SSPanel UIM [SSPanel UIM Wiki](https://wiki.sspanel.org/)  [Github](https://github.com/Anankke/SSPanel-Uim)
-
+# Docker 部署 SSPanel UIM  
+### [SSPanel UIM Wiki](https://wiki.sspanel.org/)  
+### [Github](https://github.com/Anankke/SSPanel-Uim)
+### 配置：
 > 1.Ubuntu 22.04  
 > 2.Nginx  
 > 3.PHP  
