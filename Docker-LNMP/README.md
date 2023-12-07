@@ -69,6 +69,7 @@ mkdir etc bin
 cd /www/wwwroot
 mkdir 存放项目的文件夹
 cd 存放项目的文件夹
+touch index.html
 ```
 
 # 安装 Docker 图形化管理 portainer：
