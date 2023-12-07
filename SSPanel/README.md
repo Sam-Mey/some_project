@@ -1,4 +1,4 @@
-# docker 安装 SSPanel UIM
+# docker 安装 SSPanel UIM [SSPanel UIM Wiki](https://wiki.sspanel.org/)
 
 > 1.Ubuntu 22.04  
 > 2.Nginx  
