@@ -58,17 +58,17 @@ chmod +x /usr/local/bin/docker-compose
 cd /
 mkdir www
 cd www
-mkdir backup server wwwlogs wwwroot
+mkdir server wwwlogs wwwroot
 cd server
 mkdir mysql nginx php phpmyadmin redis
 cd nginx
-mkdir certs
 touch nginx.conf
+mkdir certs
 cd /www/server/php
 mkdir etc bin
 cd /www/wwwroot
 mkdir 存放项目的文件夹
-cd /
+cd 存放项目的文件夹
 ```
 
 # 安装 Docker 图形化管理 portainer：
