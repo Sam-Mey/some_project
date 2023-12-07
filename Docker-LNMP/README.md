@@ -81,6 +81,11 @@ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /va
 docker restart portainer
 ```
 
+# 删除所以容器
+```bash
+docker rm -f $(docker ps -a -q)
+```
+
 # 卸载：  
 
 Ubuntu/Debian；  
