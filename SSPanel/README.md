@@ -27,11 +27,10 @@ cd /www/wwwroot
 mkdir SSPanel
 cd /
 ```
-## 编写配置文件：
+## 3.编写配置文件：
 
-### 1.编写 `docker-compose.yaml` 文件 [下载]()
+> 1.编写 `docker-compose.yml` 文件 [下载]()  
+> 2.编写 `nginx.conf` 文件 [下载]()  
 
-### 2.编写 `nginx.conf` 文件 [下载]()
-
-## 部署 SSPanel UIM
+## 4.部署 SSPanel UIM
 
