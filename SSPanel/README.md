@@ -7,7 +7,7 @@
 > 5.Redis  
 > 6.phpMyAdmin  
 
-## 1.安装 Docker，参阅 [Docker LNMP]()
+## 1.安装 Docker，参阅 [Docker LNMP](https://github.com/Sam-Mey/some_project/blob/main/Docker-LNMP/README.md)
 
 ## 2.创建目录
 ```bash
