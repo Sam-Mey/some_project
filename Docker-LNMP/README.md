@@ -62,8 +62,7 @@ mkdir backup server wwwlogs wwwroot
 cd server
 mkdir mysql nginx php phpmyadmin redis
 cd nginx
-mkdir conf certs
-cd conf
+mkdir certs
 touch nginx.conf
 cd /www/server/php
 mkdir etc bin
