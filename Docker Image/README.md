@@ -15,10 +15,15 @@ cd server
 mkdir mysql nginx php phpmyadmin redis
 cd nginx
 touch nginx.conf
-cd /www/myProject
+cd /test/www/myProject
 touch index.php
 echo "<?php phpinfo(); ?>" >> index.php
-cd /www
+cd /test/www
+```
+
+## 执行
+
+```bash
 docker-compose up -d
 ```
 
