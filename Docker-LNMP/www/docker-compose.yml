@@ -37,7 +37,7 @@ services:
     ports:
       - 9000:9000
     volumes:
-      - ./wwwroot/project:/var/www/html # 将网站目录挂载到 PHP 容器中 必须与 nginx 路径一致。
+      - ./wwwroot/project:/var/www/html # 将网站目录挂载到 PHP 容器中
     depends_on:
       - mysql-mariadb
     restart: always
@@ -52,8 +52,8 @@ services:
     environment:
       PMA_ARBITRARY: "1"
       PMA_HOST: mysql-mariadb
-      PMA_USER: root # 数据库用户 默认root
-      PMA_PASSWORD: # 数据库密码
+      # PMA_USER: root # 数据库用户 默认root
+      # PMA_PASSWORD: 123456 # 数据库密码 默认 123456
     restart: always
     networks:
       - mynetwork
