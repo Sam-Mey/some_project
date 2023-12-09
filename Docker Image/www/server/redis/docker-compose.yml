@@ -1,7 +1,7 @@
 version: '3'
 
 services:
- custom_mysql_mariadb:
+ custom_redis:
     build:
       context: .
       dockerfile: Dockerfile
