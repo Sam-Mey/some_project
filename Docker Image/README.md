@@ -31,3 +31,29 @@ docker-compose up -d
 xxx.com
 xxx.com:8080
 ```
+
+## 相关命令
+
+### 当前系统中的所有镜像
+
+```bash
+docker images
+```
+
+### 进入运行中的容器
+
+```bash
+docker-compose exec my_php bash
+```
+
+### 查看已安装的 PHP 扩展列表
+
+```bash
+php -m
+```
+
+### 使用正确的名称和标签来执行 docker save 命令，并保存到当前目录下
+
+```bash
+docker save -o image.tar 镜像名称:latest
+```
