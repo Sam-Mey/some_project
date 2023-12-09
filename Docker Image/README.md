@@ -6,8 +6,6 @@
 
 ```bash
 cd /
-mkdir test
-cd test
 mkdir www
 cd www
 mkdir server myProject
@@ -15,10 +13,10 @@ cd server
 mkdir mysql nginx php phpmyadmin redis
 cd nginx
 touch nginx.conf
-cd /test/www/myProject
+cd /www/myProject
 touch index.php
 echo "<?php phpinfo(); ?>" >> index.php
-cd /test/www
+cd /www
 ```
 
 ## 执行
