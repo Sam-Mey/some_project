@@ -9,6 +9,12 @@
 > 5.Redis  
 > 6.phpMyAdmin  
 
+## 安装必要的软件
+
+```bash
+apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring
+```
+
 ## 1.安装 Docker，参阅 [Docker LNMP](https://github.com/Sam-Mey/some_project/blob/main/Docker-LNMP/README.md)
 
 ## 2.创建目录
