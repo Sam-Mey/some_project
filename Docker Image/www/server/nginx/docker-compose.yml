@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  my_nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: tail -f /dev/null  # 保持容器运行以便进行交互
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
