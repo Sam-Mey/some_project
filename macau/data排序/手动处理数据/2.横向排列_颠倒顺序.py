@@ -1,7 +1,7 @@
 # 包含动物的格式处理
 
 # # 读取输入文件
-# with open(r'C:\your\path\Desktop\input.txt', 'r', encoding='utf-8') as file:
+# with open(r'替换成你的实际路径\input.txt', 'r', encoding='utf-8') as file:
 #     content = file.readlines()
 
 # # 将内容处理成横向排列
@@ -27,14 +27,14 @@
 
 # # 将处理后的内容写入输出文件
 # output_lines.reverse()  # 反转列表顺序
-# with open(r'C:\your\path\Desktop\output.txt', 'w', encoding='utf-8') as file:
+# with open(r'替换成你的实际路径\output.txt', 'w', encoding='utf-8') as file:
 #     file.write('\n'.join(output_lines))
 
 
 # 以下为纯数字格式处理
 
 # 读取输入文件
-with open(r'C:\your\path\Desktop\input.txt', 'r', encoding='utf-8') as file:
+with open(r'替换成你的实际路径\input.txt', 'r', encoding='utf-8') as file:
     content = file.readlines()
 
 # 将内容处理成横向排列
@@ -61,5 +61,5 @@ if current_period:
 
 # 将处理后的内容写入输出文件
 output_lines.reverse()  # 反转列表顺序
-with open(r'C:\your\path\Desktop\output.txt','w', encoding='utf-8') as file:
+with open(r'替换成你的实际路径\output.txt', 'w', encoding='utf-8') as file:
     file.write('\n'.join(output_lines))
