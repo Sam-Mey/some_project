@@ -1,12 +1,6 @@
-# 安装 [Docker](https://www.docker.com/) [Hub 镜像站](https://hub.docker.com/)
+# 安装 [Docker](https://www.docker.com/)
 
-> docker image tag
->  
-> master: 与项目最新提交保持一致。
->
-> latest: 最新 release 版本。
->
-> v *: release 版本号。
+## [Docker Hub 镜像站](https://hub.docker.com/)
 
 ## Centos
 
