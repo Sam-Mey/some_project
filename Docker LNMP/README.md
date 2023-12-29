@@ -69,8 +69,8 @@ cd /www/server/nginx
 touch nginx.conf
 mkdir certs
 cd /www/wwwroot
-mkdir project
-cd project
+mkdir website
+cd website
 touch index.php
 echo "<?php phpinfo(); ?>" >> index.php
 ```
