@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     command: tail -f /dev/null  # 保持容器运行以便进行交互
+    ports:
+      - "3306:3306"
     networks:
       - my_network
 

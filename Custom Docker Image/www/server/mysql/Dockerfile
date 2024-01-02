@@ -6,7 +6,7 @@ RUN apt-get update \
     && apt-get install -y lsb-release
 
 # 设置工作目录
-WORKDIR /app/myProject
+WORKDIR /app/website
 
 # 安装依赖工具
 RUN apt-get update \

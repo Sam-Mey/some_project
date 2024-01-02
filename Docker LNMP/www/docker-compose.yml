@@ -9,7 +9,7 @@ services:
     volumes:
       - ./server/nginx/nginx.conf:/etc/nginx/conf.d/default.conf # Nginx 配置文件
       - ./server/nginx/certs:/etc/nginx/certs # SSL 证书目录
-      - ./wwwroot/path:/usr/share/nginx/html # 网站根目录
+      - ./website/path:/usr/share/nginx/html # 网站根目录
     depends_on:
       - php
     restart: always
@@ -37,7 +37,7 @@ services:
     ports:
       - 9000:9000
     volumes:
-      - ./wwwroot/path:/var/www/html # 将网站目录挂载到 PHP 容器中
+      - ./website/path:/var/www/html # 将网站目录挂载到 PHP 容器中
     depends_on:
       - mysql-mariadb
     restart: always
