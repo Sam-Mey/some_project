@@ -1,18 +1,9 @@
 version: '3'
 
 services:
-  custom_nginx:
+  nginx:
     build:
-      context: .
-      dockerfile: Dockerfile
-    command: tail -f /dev/null  # 保持容器运行以便进行交互
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf  # 这里将本地的 nginx.conf 文件映射到容器内部的 Nginx 配置文件位置
-      - ./nginx/certs:/etc/nginx/certs # SSL 证书目录
-      - ./website/path:/var/www/html # 网站根目录
-    networks:
-      - my_network
-
-networks:
-  my_network:
-    driver: bridge
+      context: . # 指定Dockerfile所在的目录
+      dockerfile: Dockerfile  # Dockerfile的文件名
+    ports:
+      - "80:80"  # 将主机的80端口映射到NGINX容器的80端口

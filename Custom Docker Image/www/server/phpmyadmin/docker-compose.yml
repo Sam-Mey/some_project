@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: tail -f /dev/null  # 保持容器运行以便进行交互
+    restart: always
     ports:
       - "8080:80"
     networks:

@@ -40,8 +40,5 @@ RUN mkdir -p /var/log/nginx && \
 # 清理APT软件包缓存
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# 定义Nginx监听端口
-EXPOSE 80
-
 # 启动Nginx服务
 CMD ["nginx", "-g", "daemon off;"]

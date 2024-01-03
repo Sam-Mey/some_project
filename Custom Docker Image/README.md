@@ -65,7 +65,7 @@ docker rm $(docker ps -aq)
 docker images
 ```
 
-### 将删除所有镜像。执行以下命令
+### 将删除所有镜像，执行以下命令
 
 ```bash
 docker rmi $(docker images -aq)
@@ -75,4 +75,17 @@ docker rmi $(docker images -aq)
 
 ```bash
 docker rmi -f 容器ID_1 容器ID_2 容器ID_3 容器ID_4 ...
+```
+
+### 列出在 Docker 中创建的所有网络
+
+```bash
+docker network ls
+```
+
+### 删除指定网络、所有网络
+
+```bash
+docker network rm <网络ID或名称>
+docker network prune
 ```

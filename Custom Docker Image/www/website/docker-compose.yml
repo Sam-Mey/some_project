@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: nginx
+    build:
+      context: ../server/nginx  # Dockerfile所在的相对路径
+      dockerfile: Dockerfile   # Dockerfile的文件名
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      NGINX_PORT: 80
+    volumes:
+      # - ./nginx-config:/etc/nginx/conf.d  # 挂载配置文件到容器内的nginx目录
+      - nginx-log:/var/log/nginx  # 挂载日志目录
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail http://localhost || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m" # 日志最大值 m=兆 
+        max-file: "3"
+    networks:
+      - my-network
+
+  mysql: 
+    container_name: mariadb
+    build: 
+      context: ../server/mysql # Dockerfile所在的相对路径
+      dockerfile: Dockerfile   # Dockerfile的文件名
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ../server/mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  my-network:
+    driver: bridge
+
+volumes:
+  nginx-log:
