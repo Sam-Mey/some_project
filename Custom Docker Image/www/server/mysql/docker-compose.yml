@@ -1,16 +1,20 @@
-version: '3'
+version: '3.8'
 
 services:
- mysql:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    restart: always
+  mariadb:
+    image: mariadb:latest  # 使用官方 MariaDB 镜像
+    container_name: mariadb_container
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456  # 设置数据库 root 密码
+    volumes:
+      - mariadb_data:/var/lib/mysql
     ports:
       - "3306:3306"
     networks:
-      - my_network
+      - mariadb_network
+
+volumes:
+  mariadb_data:
 
 networks:
-  my_network:
-    driver: bridge
+  mariadb_network:

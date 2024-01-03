@@ -1,18 +1,12 @@
-version: '3'
+version: '3.8'
 
 services:
-  custom_php:
+  php:
     build:
       context: .
       dockerfile: Dockerfile
-    restart: always
     ports:
       - "9000:9000"
     volumes:
-      - ./www/website/path:/usr/share/nginx/html # 网站根目录
-    networks:
-      - my_network
-
-networks:
-  my_network:
-    driver: bridge
+      - ./php.ini:/etc/php/8.3/fpm/conf.d/php.ini
+    # 其他可能需要的配置

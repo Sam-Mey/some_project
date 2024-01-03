@@ -1,34 +1,22 @@
-# 设置基础镜像
+# 使用适用于 arm64 架构的基础镜像
 FROM arm64v8/ubuntu
 
-# 安装 lsb_release
-RUN apt-get update \
-    && apt-get install -y lsb-release
-
-# 设置工作目录
-WORKDIR /app/website
-
-# 安装依赖工具
-RUN apt-get update \
-    && apt-get install -y \
-    curl \
-    gnupg \
+# 安装必要的软件包
+RUN apt-get update && apt-get install -y \
     apt-transport-https \
-    software-properties-common
+    curl
 
-# 安装必要的软件包和导入 GPG Key
-RUN apt-get install -y apt-transport-https curl
-RUN mkdir -p /etc/apt/keyrings
-RUN curl -o /etc/apt/keyrings/mariadb-keyring.pgp 'https://mariadb.org/mariadb_release_signing_key.pgp'
+# 创建 keyrings 目录并导入 MariaDB GPG Key
+RUN mkdir -p /etc/apt/keyrings \
+    && curl -o /etc/apt/keyrings/mariadb-keyring.pgp 'https://mariadb.org/mariadb_release_signing_key.pgp'
 
-# 将配置写入 mariadb.sources 文件中，然后复制到 /etc/apt/sources.list.d/ 中
-RUN echo 'X-Repolib-Name: MariaDB\nTypes: deb\nURIs: https://deb.mariadb.org/11.1/ubuntu\nSuites: jammy\nComponents: main main/debug\nSigned-By: /etc/apt/keyrings/mariadb-keyring.pgp' > mariadb.sources
-RUN cp mariadb.sources /etc/apt/sources.list.d/mariadb.sources
+# 添加 MariaDB 源到 apt 源列表
+RUN echo 'X-Repolib-Name: MariaDB\nTypes: deb\nURIs: https://deb.mariadb.org/11.2/ubuntu\nSuites: jammy\nComponents: main main/debug\nSigned-By: /etc/apt/keyrings/mariadb-keyring.pgp' > /etc/apt/sources.list.d/mariadb.sources
 
-# 安装 MariaDB
-RUN apt-get update && \
-    apt-get install -y mariadb-server && \
-    echo "MariaDB installation completed"
+# 安装 MariaDB，避免交互式配置
+RUN export DEBIAN_FRONTEND=noninteractive \
+    && apt-get update \
+    && apt-get install -y mariadb-server
 
-# 清理APT软件包缓存
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+# 设置启动 MariaDB 的命令
+CMD ["mysqld", "--user=mysql", "--console"]

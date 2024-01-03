@@ -29,22 +29,3 @@
 
 # volumes:
 #   nginx-log:
-
-
-version: '3.8'
-
-services:
-  mysql-db:
-    build:
-      context: ../server/mysql
-      dockerfile: Dockerfile
-    container_name: mysql-container
-    environment:
-      MYSQL_ROOT_PASSWORD: my-secret-pw
-      MYSQL_DATABASE: mydatabase
-      MYSQL_USER: myuser
-      MYSQL_PASSWORD: mypassword
-    ports:
-      - "3306:3306"
-    volumes:
-      - ../server/mysql/mariadb-data:/var/lib/mysql
