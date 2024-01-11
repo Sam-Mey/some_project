@@ -13,8 +13,8 @@
 9. [ssPanel 面板搭建](https://github.com/Sam-Mey/some_project/tree/main/ssPanel)
 10. [warp_1.1.1.1 解锁流媒体 （未完成）...](https://github.com/Sam-Mey/some_project/tree/main/warp_1.1.1.1)
 
-### 临时笔记，记性不好 `:(`
-
+## 临时笔记，记性不好 `:(`
+  
 要将本地 项目 中的文件上传到 GitHub 的 项目 仓库中，您可以按照以下步骤进行操作
 
 ### 1.确保已安装 [Git](https://git-scm.com/download)
