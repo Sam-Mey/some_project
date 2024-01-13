@@ -56,17 +56,15 @@ chmod +x /usr/local/bin/docker-compose
 cd /
 mkdir www
 cd www
-mkdir server wwwroot 
+mkdir server
 cd server
 mkdir nginx mysql php redis phpmyadmin
 cd /www/server/nginx
 touch nginx.conf
 mkdir certs
-cd /www/wwwroot
+cd /www
 mkdir website
 cd website
-touch index.php
-echo "<?php phpinfo(); ?>" >> index.php
 ```
 
 ## 安装 Docker 图形化管理 portainer
