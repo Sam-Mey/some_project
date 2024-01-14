@@ -8,15 +8,15 @@
 cd /
 mkdir www
 cd www
-mkdir server myProject
+mkdir server web
 cd server
 mkdir mysql nginx php phpmyadmin redis
 cd nginx
 touch nginx.conf
-cd /www/myProject
-touch index.php
-echo "<?php phpinfo(); ?>" >> index.php
-cd /www
+mkdir sites
+cd sites
+touch server.conf
+cd /www/web
 ```
 
 ## 执行
