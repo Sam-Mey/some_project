@@ -4,8 +4,7 @@ FROM arm64v8/ubuntu
 # 安装必要的软件包
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
-    curl \
-    mariadb-client
+    curl
 
 # 创建 keyrings 目录并导入 MariaDB GPG Key
 RUN mkdir -p /etc/apt/keyrings \
@@ -18,6 +17,9 @@ RUN echo 'X-Repolib-Name: MariaDB\nTypes: deb\nURIs: https://deb.mariadb.org/11.
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update \
     && apt-get install -y mariadb-server
+
+# 复制初始化 SQL 文件到 Docker 镜像中
+COPY ../server/mysql/mariadb_data/init.sql /docker-entrypoint-initdb.d/
 
 # 设置启动 MariaDB 的命令
 CMD ["mysqld", "--user=mysql", "--console"]

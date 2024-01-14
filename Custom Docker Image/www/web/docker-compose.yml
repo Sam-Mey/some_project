@@ -41,10 +41,11 @@ services:
       - "3306:3306"
     image: mariadb:latest
     container_name: mariadb
-    environment:
-      - MYSQL_ROOT_PASSWORD=123456
+    # environment:
+    #   - MYSQL_ROOT_PASSWORD=123456
     volumes:
       - mariadb_data:/var/lib/mysql
+      - ../server/mysql/mariadb_data/init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: [ "CMD-SHELL", "curl --fail http://localhost || exit 1" ]
       interval: 30s
@@ -96,8 +97,8 @@ services:
     restart: always
     environment:
       - PMA_HOST=mariadb # 这里应该是 MariaDB 容器的服务名称
-      - PMA_USER=root # 这是你 MariaDB 数据库的用户名
-      - PMA_PASSWORD=123456 # 这是你 MariaDB 数据库的密码
+      - PMA_USER=sspanel # 这是你 MariaDB 数据库的用户名
+      - PMA_PASSWORD=sspanel-password # 这是你 MariaDB 数据库的密码
     ports:
       - "8080:80"
     healthcheck:
