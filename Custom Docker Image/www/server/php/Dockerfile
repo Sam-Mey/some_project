@@ -28,7 +28,8 @@ RUN apt-get update && apt-get install -y \
     php8.2-redis \
     php8.2-xml \
     php8.2-yaml \
-    php8.2-zip
+    php8.2-zip \
+    php8.2-nano
 
 # 拷贝自定义的 php.ini 文件
 COPY php.ini /etc/php/8.2/fpm/conf.d/php.ini

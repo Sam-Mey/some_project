@@ -4,7 +4,8 @@ FROM arm64v8/ubuntu
 # 安装必要的软件包
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
-    curl
+    curl \
+    mariadb-client
 
 # 创建 keyrings 目录并导入 MariaDB GPG Key
 RUN mkdir -p /etc/apt/keyrings \
