@@ -3,7 +3,7 @@ version: '3.8'
 services:
   nginx:
     build:
-      context: ../server/nginx  # Dockerfile所在的相对路径
+      context: .  # Dockerfile所在的相对路径
       dockerfile: Dockerfile   # Dockerfile的文件名
     container_name: nginx
     restart: always
@@ -24,8 +24,6 @@ services:
       options:
         max-size: "1m" # 日志最大值 m=兆 
         max-file: "3"
-    networks:
-      - my-network
 
 volumes:
   nginx-log:

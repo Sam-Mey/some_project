@@ -8,5 +8,5 @@ services:
     ports:
       - "9000:9000"
     volumes:
-      - ./php.ini:/etc/php/8.3/fpm/conf.d/php.ini
+      - ./php.ini:/etc/php/8.2/fpm/conf.d/php.ini
     # 其他可能需要的配置
