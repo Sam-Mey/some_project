@@ -2,21 +2,22 @@
 FROM arm64v8/ubuntu:jammy
 
 # 安装必要的软件包
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && \
+    apt-get install -y \
     lsb-release \
     curl \
     gnupg \
-    apt-transport-https
+    apt-transport-https \
+    redis-server && \
+    echo "vm.overcommit_memory = 1" >> /etc/sysctl.conf && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-# 安装 Redis 服务器
-RUN apt-get update && apt-get install -y \
-    redis-server
+# 将配置文件复制到容器中
+COPY redis.conf /etc/redis/
 
-# 清理安装过程中产生的临时文件
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# # 暴露 Redis 默认端口
-# EXPOSE 6379
+# 重新加载系统配置
+RUN sysctl -p
 
 # 设置启动 Redis 的命令
-CMD ["redis-server"]
+CMD ["redis-server", "/etc/redis/redis.conf"]

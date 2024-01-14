@@ -46,6 +46,12 @@ docker-compose exec my_php bash
 php -m
 ```
 
+### 查看日志
+
+```bash
+docker logs 容器_ID
+```
+
 ### 使用正确的名称和标签来执行 docker save 命令，并保存到当前目录下
 
 ```bash
@@ -89,3 +95,18 @@ docker network ls
 docker network rm <网络ID或名称>
 docker network prune
 ```
+
+### 附加知识
+
+> *** 构建镜像之前 `sudo sysctl -w vm.overcommit_memory=1`
+>  
+> vm.overcommit_memory 是Linux内核参数之一，用于控制系统对内存分配的处理方式。具体来说，它涉及到内存超额分配（Overcommitting）的策略。
+>  
+> 当 vm.overcommit_memory 设置为 0 时，系统允许分配超过实际物理内存的虚拟内存。这意味着，系统允许进程分配的虚拟内存总量超过实际可用的物理内存和交换空间的总和。这种策略通常被称为 "内存超额分配"（Overcommitting）。
+>  
+> 当 vm.overcommit_memory 设置为 1 时，系统会检查是否有足够的物理内存和交换空间来满足进程所请求的虚拟内存。如果没有足够的空间，分配将被拒绝。这种策略更加保守，可以避免在内存不足的情况下导致系统不稳定。
+>  
+> 在Redis的情境下，一些特定的工作负载可能会导致内存分配的不确定性，因此将 vm.overcommit_memory 设置为 1 可以提高系统的稳定性，确保只有在系统有足够可用内存时才进行内存分配。
+>  
+> 总体而言，具体的设置取决于系统的使用场景和需求。在一些要求稳定性和可预测性的环境中，将其设置为 1 是一个常见的做法
+>  
