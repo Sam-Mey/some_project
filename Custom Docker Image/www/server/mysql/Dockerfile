@@ -1,5 +1,5 @@
 # 使用适用于 arm64 架构的基础镜像
-FROM arm64v8/ubuntu
+FROM ubuntu:jammy
 
 # 安装必要的软件包
 RUN apt-get update && apt-get install -y \

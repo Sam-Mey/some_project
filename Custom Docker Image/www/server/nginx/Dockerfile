@@ -1,12 +1,12 @@
 # 设置基础镜像
-FROM arm64v8/ubuntu
+FROM arm64/ubuntu
 
 # 安装 lsb_release
 RUN apt-get update \
     && apt-get install -y lsb-release
 
 # 设置工作目录
-WORKDIR /app/website
+WORKDIR /var/www/html
 
 # 安装依赖工具
 RUN apt-get update \
