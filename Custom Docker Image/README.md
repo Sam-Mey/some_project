@@ -96,6 +96,12 @@ docker network rm <网络ID或名称>
 docker network prune
 ```
 
+### 清理 docker 数据
+
+```bash
+docker system prune -a
+```
+
 ### 附加知识
 
 > *** 构建镜像之前 `sudo sysctl -w vm.overcommit_memory=1`

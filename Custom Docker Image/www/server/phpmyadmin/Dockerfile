@@ -16,3 +16,4 @@ FROM arm64v8/phpmyadmin
 
 # 清理APT软件包缓存
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+

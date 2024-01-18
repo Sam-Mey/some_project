@@ -1,5 +1,5 @@
 # 设置基础镜像
-FROM arm64/ubuntu
+FROM arm64v8/ubuntu
 
 # 安装 lsb_release
 RUN apt-get update \
