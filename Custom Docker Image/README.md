@@ -99,6 +99,8 @@ docker network prune
 ### 清理 docker 数据
 
 ```bash
+df -h
+sudo du -h --max-depth=1 /
 docker system prune -a
 ```
 
