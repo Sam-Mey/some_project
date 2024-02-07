@@ -15,40 +15,46 @@
 
 ## 临时笔记，记性不好 `:(`
   
-要将本地 项目 中的文件上传到 GitHub 的 项目 仓库中，您可以按照以下步骤进行操作
+> 要将本地 项目 中的文件上传到 GitHub 的 项目 仓库中，您可以按照以下步骤进行操作
+>  
+> 确保已安装 [Git](https://git-scm.com/download)
 
-### 1.确保已安装 [Git](https://git-scm.com/download)
-
-### 2.克隆 GitHub 仓库到本地
+### 1.克隆 GitHub 仓库到本地
 
 ```bash
 git clone https://github.com/您的用户名/项目.git
+cd 项目
 ```
 
-### 3.将更改添加到暂存区
+### 2.创建或编辑 .gitignore 文件，打开 .gitignore 文件
+
+> 添加排除提交到仓库的文件
+>  
+> file1
+> file2
+> file3
+> ...
 
 ```bash
-cd 项目
-git add .
+git add .gitignore
+git commit -m "Add .gitignore to exclude .env"
 ```
 
-### 设置用户名和邮箱地址
+### 3.添加到暂存区
+
+```bash
+git add .
+git commit -m "提交的文件、文件夹"
+git push origin main
+# 或
+git push origin master
+```
+
+### 4.第一次使用 `Git` 需设置用户名和邮箱地址
 
 ```bash
 git config --global user.email "your_email@example.com"
 git config --global user.name "Your Name"
-```
-
-### 提交更改
-
-```bash
-git commit -m "提交的文件、文件夹"
-```
-
-### 推送到 GitHub
-
-```bash
-git push origin main
 ```
 
 ### 查看哪些文件是否有被添加到 Git 跟踪列表
