@@ -106,11 +106,11 @@ yarn install
 ### 1. 创建虚拟环境的目录，打开 cmd 切换到要创建虚拟环境的目录；如：D:\project
 
 ```bash
-python -m venv .env          # 创建虚拟环境
-.env\Scripts\activate        # (vscode) 激活虚拟环境 
-.env\Scripts\activate        # (Windows cmd) 激活虚拟环境 
-.env\Scripts\activate.ps1    # (Windows PowerShell) 激活虚拟环境
-deactivate                   # 退出虚拟环境
+python -m venv venv            # 创建虚拟环境
+.\venv\Scripts\activate        # (vscode) 激活虚拟环境 
+.\venv\Scripts\activate        # (Windows cmd) 激活虚拟环境 
+.\venv\Scripts\activate.ps1    # (Windows PowerShell) 激活虚拟环境
+deactivate                     # 退出虚拟环境
 ```
 
 #### 2. 安装 Django
