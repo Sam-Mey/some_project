@@ -1,6 +1,8 @@
 # 本地搭建 [React](https://github.com/facebook/react) + Django 前后端项目分离的开发环境 (Windows)
 
-## [React 官网](https://react.dev)
+## [React 官网](https://react.dev)  
+
+## [创建 React App](https://create-react-app.dev/)
 
 ## 安装数据库 [MySQL](https://dev.mysql.com/downloads/mysql/)
 
