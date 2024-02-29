@@ -222,3 +222,94 @@ python manage.py changepassword admin  # 重置超级管理员密码
 
 > 1. 此时就可以访问 http://127.0.0.1:8000/ ,不出意外你将会看到一下界面：[查看](https://github.com/Sam-Mey/some_project/blob/main/React-Django_dev-env/img/Django.png)
 > 2. 接下来可以开始你的项目开发了！
+
+#### 以上为前后端分离相关配置
+
+
+# 如何将 react 集成到 Django ？
+
+## 1.创建 react 项目
+```bash
+yarn create react-app myproject
+```
+
+## 2.在 react 项目源码文（src/）件夹中创建 setupProxy.js
+```bash
+# src/setupProxy.js
+
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+module.exports = function(app) {
+  app.use(
+    '/api',
+    createProxyMiddleware({
+      target: 'http://localhost:8000',
+      changeOrigin: true,
+    })
+  );
+};
+```
+
+### 3.现在构建 react 项目静态文件包
+```bash
+yarn build # 将会输出一个 build 的文件夹
+```
+
+### 4.将 `build` 根文件夹中的复制到 `static/` 目录下; 再将 `static` 复制到 `Django` 项目根目录下；接下来进行一系列 `Django` 项目配置：
+
+```bash
+# 1.django 项目中的 yourapp/ 根目录创建 templates/index.html 下写入以下：
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="manifest" href="{% static 'manifest.json' %}" />
+    <title>React App</title>
+    <script defer="defer" src="{% static 'js/main.xxx.js' %}"></script>
+    <link href="{% static 'css/main.xxx.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+</body>
+
+</html>
+
+
+# 2.django 项目中的 yourapp/ 根目录创建 `urls.py` 添加以下：
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index_view, name='index'),
+]
+
+# 3.django 项目中的 yourapp/apps.py 添加以下：
+from django.apps import appConfig
+
+class YourAppConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'yourapp' # 替换为实际应用程序
+
+
+# 4.django 项目 `/` 目录下 `settings.py` 添加以下：
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+# 5.django 项目 `/` 目录下 `urls.py` 添加以下：
+from yourapp import views 
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include('yourapp.urls')),
+    path('', views.index_view, name='index'),
+]
+
+# 6.启动 `Django` . 此时打开浏览器：`http://localhost:8000` 就可以访问 react 首页了 ：）
+python manage.py runserver
+```
