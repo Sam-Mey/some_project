@@ -296,6 +296,10 @@ class YourAppConfig(AppConfig):
 
 
 # 4.django 项目 `/` 目录下 `settings.py` 添加以下：
+INSTALLED_APPS = [
+    'yourapp',
+]
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
