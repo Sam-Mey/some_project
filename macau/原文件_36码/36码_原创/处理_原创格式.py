@@ -31,7 +31,7 @@ chunks = [formatted_numbers[i:i + 12]
 wrapped_lines = ['[' + '.'.join(chunk) + ']' for chunk in chunks]
 
 # 指定输出路径为当前目录下的新文件夹
-output_path = '处理后_36码/[新]_原创_36码/'
+output_path = 'C:\\Users\\71081\Desktop\\处理后-[新]_原创_36码/'
 
 # 如果文件夹不存在，则创建文件夹
 if not os.path.exists(output_path):

@@ -27,7 +27,7 @@ sorted_lines = ['[' + '.'.join([f'{x:02}' for x in sorted_numbers[i:i+12]]) +
                 ']' for i in range(0, len(sorted_numbers), 12)]
 
 # 指定输出路径为当前目录下的 ""
-output_path = '[新]_am49.com_36码/'
+output_path = 'C:\\Users\\71081\Desktop\\处理后-[新]-am49赛马会/'
 
 # 如果文件夹不存在，则创建文件夹
 if not os.path.exists(output_path):
