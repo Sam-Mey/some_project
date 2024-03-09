@@ -15,5 +15,5 @@ sudo firewall-cmd --list-all
 ```
 ### 2. 一键申请证书
 ```bash
-wget https://raw.githubusercontent.com/Sam-Mey/some_project/main/EasySSL/acme.sh && chmod +x acme.sh && ./acme.sh
+wget https://raw.githubusercontent.com/Sam-Mey/some_project/main/SSL/acme.sh && chmod +x acme.sh && ./acme.sh
 ```
