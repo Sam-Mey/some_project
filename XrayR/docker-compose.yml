@@ -1,4 +1,3 @@
-
 #version: '3'
 #services: 
 #  xrayr: 
@@ -19,5 +18,5 @@ services:
     logging:
       driver: "json-file"
       options:
-        max-size: "200k" # 默认日志大小 200k
+        max-size: "64k" # 默认日志大小 64k
         max-file: "1" # 默认日志文件 1 个
