@@ -1,79 +1,53 @@
-// [
-//     {
-//         "tag": "IPv4_out",
-//         "protocol": "freedom",
-//         "settings": {}
-//     },
-//     {
-//         "tag": "IPv6_out",
-//         "protocol": "freedom",
-//         "settings": {
-//             "domainStrategy": "UseIPv6"
-//         }
-//     },
-//     {
-//         "tag": "socks5-warp",
-//         "protocol": "socks",
-//         "settings": {
-//             "servers": [{
-//                 "address": "127.0.0.1",
-//                 "port": 1080
-//             }]
-//         }
-//     },
-//     {
-//         "protocol": "blackhole",
-//         "tag": "block"
-//     }
-// ]
-
-
 [
     {
-        "protocol":"freedom",
+        "protocol": "freedom",
         "tag": "direct"
     },
     {
-        "protocol":"wireguard",
-        "settings":{
-            "secretKey":"YFYOAdbw1bKTHlNNi+aEjBM3BO7unuFC5rOkMRAz9XY=", // 粘贴你的 "private_key" 值
-            "address":[
+        "protocol": "wireguard",
+        "settings": {
+            "secretKey": "YFYOAdbw1bKTHlNNi+aEjBM3BO7unuFC5rOkMRAz9XY=",
+            "address": [
                 "172.16.0.2/32",
                 "2606:4700:110:8a36:df92:102a:9602:fa18/128"
             ],
-            "peers":[
+            "peers": [
                 {
-                    "publicKey":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                    "allowedIPs":[
+                    "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+                    "allowedIPs": [
                         "0.0.0.0/0",
                         "::/0"
                     ],
-                    "endpoint":"engage.cloudflareclient.com:2408" // 或填写 162.159.193.10:2408 或 [2606:4700:d0::a29f:c001]:2408
+                    "endpoint": "engage.cloudflareclient.com:2408"
                 }
             ],
-            "reserved":[78, 135, 76], // 粘贴你的 "reserved" 值
-            "mtu":1280
+            "reserved": [
+                78,
+                135,
+                76
+            ],
+            "mtu": 1280
         },
-        "tag":"wireguard"
+        "tag": "wireguard"
     },
     {
-        "protocol":"freedom",
-        "settings":{
-            "domainStrategy":"UseIPv4"
+        "protocol": "freedom",
+        "settings": {
+            "domainStrategy": "UseIPv4"
         },
-        "proxySettings":{
-            "tag":"wireguard"
+        "proxySettings": {
+            "tag": "wireguard"
         },
-        "tag":"warp-IPv4"
+        "tag": "warp-IPv4"
     },
     {
-        "protocol":"freedom",
-        "settings":{
-            "domainStrategy":"UseIPv6"
+        "protocol": "freedom",
+        "settings": {
+            "domainStrategy": "UseIPv6"
         },
-        "proxySettings":{
-            "tag":"wireguard"
+        "proxySettings": {
+            "tag": "wireguard"
         },
-        "tag":"warp-IPv6"
+        "tag": "warp-IPv6"
     }
 ]
